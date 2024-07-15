@@ -1,0 +1,258 @@
+/* header css */
+@media only screen and (max-width:992px) {
+
+    .container-screen {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .user .user-profile {
+        height: 40px;
+        width: 40px;
+    }
+
+    .burger-menu {
+        display: block;
+        /* background: #f97316; */
+        height: 35px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+    }
+
+    .header-menu ul li:hover {
+        background: #f97316;
+        padding: 6px 10px;
+        border-radius: 5px;
+    }
+
+    .header-menu ul li {
+        padding: 6px 10px;
+    }
+
+    .header-menu ul {
+        position: absolute;
+        z-index: 9999;
+        width: 100%;
+        background: #000;
+        left: 0;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-top: 10px;
+        /* height: 100vh; */
+    }
+
+    .header .header-menu ul li {
+        margin: 10px auto;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .desktop-logo {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: block;
+        padding: 10px;
+        background: #000000;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .header-menu .dropdown-menu {
+        background: #000;
+        margin-top: 6px;
+    }
+
+    .header-menu .dropdown-item {
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    .moremenulist {
+        margin: 6px 0px;
+    }
+
+    /* footer css */
+
+    .footer-menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-logo img {
+        height: 100px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+
+    /* footer css */
+    .footer-menu a svg {
+        width: 135px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+
+    /* footer css */
+    .footer-menu a svg {
+        width: 140px;
+    }
+
+    .footer-menu {
+        justify-content: start;
+    }
+
+    .category-container .sectiontitle {
+        color: #ffffff;
+        line-height: 25px;
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width:572px) and (max-width:768px) {
+
+    /* footer css */
+    .copyright-menu ul {
+        padding-left: 0;
+    }
+
+    .footer,
+    .copyright {
+        text-align: center;
+    }
+
+    .footer-menu {
+        justify-content: center;
+    }
+
+    .designdevelop {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    /* ott css */
+
+    .play-icon-banner span svg {
+        width: 52px;
+        height: 52px;
+    }
+
+    .play-icon-content span svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .category-container .sectiontitle {
+        color: #ffffff;
+        line-height: 25px;
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width:572px) {
+    /* footer css */
+
+    .footer,
+    .copyright {
+        text-align: center;
+    }
+
+    .footer-menu {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .footer-menu a svg {
+        width: 130px;
+    }
+
+    .copyright-menu ul {
+        padding-left: 0;
+    }
+
+    .designdevelop {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    /* ott css */
+
+    .play-icon-banner span svg {
+        width: 52px;
+        height: 52px;
+    }
+
+    .play-icon-content span svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .category-container .sectiontitle {
+        color: #ffffff;
+        line-height: 25px;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    /* videos page css */
+    .ott-videos {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .ott-videos .videos .v-content .v-title h2 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .v-content .v-duration-category {
+        padding: 10px 0px;
+    }
+
+    .v-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
