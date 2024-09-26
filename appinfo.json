@@ -1,0 +1,16 @@
+{
+    "id": "com.example.mywebosapp",
+    "version": "1.0.0",
+    "title": "First India Plus",
+    "icon": "public/fav.png",
+    "vendor": "Your Company",
+    "main": "public/index.html",
+    "description": "A webOS app built with React.",
+    "type": "web",
+    "launch_point": {
+      "uri": "public/index.html",
+      "background_color": "#ffffff",
+      "theme_color": "#000000"
+    }
+  }
+  

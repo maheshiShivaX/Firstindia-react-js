@@ -18,8 +18,7 @@ const Ott = () => {
     const navigate = useNavigate();
     const [sections, setSections] = useState([]);
     const id = localStorage.getItem('id');
-    console.log(banners, 'banners')
-    console.log(sections, 'sections')
+    const is_buy = localStorage.getItem('is_buy');
 
     useEffect(() => {
         const fetchVideos = async () => {
@@ -34,7 +33,7 @@ const Ott = () => {
                 const response = await axios.post(url);
                 if (response.status === 200) {
                     setBanner(response.data.result);
-                    console.log("Fetched data successfully:", response);
+                    // console.log("Fetched data successfully:", response);
                 } else {
                     setError("Failed to fetch banner");
                 }
@@ -62,7 +61,7 @@ const Ott = () => {
                 }
 
                 const response = await axios.post(url);
-                console.log(response, "fgfgfgfgffgfgfgfgfgfgfgfgfgfgfg")
+                // console.log(response, "fgfgfgfgffgfgfgfgfgfgfgfgfgfgfg")
                 if (response.status === 200) {
                     setSections(response.data.result);
                 } else {
@@ -148,7 +147,7 @@ const Ott = () => {
             <div className="pt-lg-5 pt-4 supersingerbannmer">
                 <img src="images/supersingerbannmer.jpg" alt="Super Singer Banner" />
             </div>
-            <div className='container-fluid'>
+            <div className='container-screen'>
                 <div className="category-container">
                     {error ? (
                         <p>Error: {error}</p>

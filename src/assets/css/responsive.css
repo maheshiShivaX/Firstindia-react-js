@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 /* header css */
 @media only screen and (max-width:992px) {
 
@@ -129,8 +131,14 @@
         font-size: 22px;
         text-transform: uppercase;
         margin-bottom: 10px;
-        margin-top: 30px;
+        margin-top: 40px;
     }
+
+    /* live-tv */
+    .tv-box {
+        background-color: #000000;
+        width: 100%;
+      }
 }
 
 @media (min-width:572px) and (max-width:768px) {
@@ -180,6 +188,28 @@
         margin-bottom: 10px;
         margin-top: 30px;
     }
+
+    /* videos page css */
+    .ott-videos .videos .v-content .v-title h2 {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+
+    .v-content .v-duration-category {
+        padding: 15px 0px;
+    }
+
+    .v-description,
+    .v-cast-section span {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    /* live-tv */
+    .tv-box {
+        background-color: #000000;
+        width: 100%;
+      }
 }
 
 @media only screen and (max-width:572px) {
@@ -233,7 +263,7 @@
         font-size: 16px;
         text-transform: uppercase;
         margin-bottom: 10px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     /* videos page css */
@@ -251,8 +281,139 @@
         padding: 10px 0px;
     }
 
-    .v-description {
+    .v-description,
+    .v-cast-section span {
         font-size: 14px;
         line-height: 20px;
     }
+
+    /*top ten vote page css */
+    .topbtn {
+        display: none;
+    }
+
+    .topten-main {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .topten-main .top-tenvote .head-section h1 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .topten-main .top-tenvote .head-section .headdesc span,.topten-main .top-tenvote .head-section .headdesc p {
+        font-size: 14px;
+        line-height: 21.2px;
+        color: #ffffff;
+    }
+
+    .vector {
+        display: none;
+    }
+
+    .mobileprice,
+    .vector1 {
+        display: block;
+    }
+
+    .desktopprice,
+    .vector {
+        display: none;
+    }
+
+    .vector1,.icons1,.icons2 {
+        height: 100px;
+    }
+
+    .topten-main .top-tenvote .awardsection .pricesection {
+        margin: 0px 0 40px;
+    }
+
+    .topcontain .containsection h4 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .topcontain .containsection p {
+        font-size: 14px;
+        line-height: 15.2px;
+    }
+
+    .city-search,
+    .search {
+        width: 100%;
+        /* padding: 0 100px; */
+    }
+
+    /*top ten vote table card */
+    .conditatedata .datatable table thead,
+    .srnumber,
+    .bottom-border {
+        display: none;
+    }
+
+    .break-point,
+    .card-heading {
+        display: block;
+    }
+
+    .card-heading {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .card-section {
+        padding-top: 15px;
+    }
+
+    .conditatedata .datatable table tbody tr {
+        display: block;
+        border: 1px solid rgba(255, 84, 2, 0.2);
+        background-color: rgba(255, 84, 2, 0.1);
+        padding: 20px 15px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .conditatedata .datatable table tbody {
+        border: none;
+        border-radius: 20px;
+        padding: 0px 0px;
+        background-color: transparent;
+    }
+
+    .conditatedata .datatable table tbody tr .padding-top-bottom {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .address,
+    .votecount {
+        font-size: 14px;
+        line-height: 19.2px;
+    }
+
+    .conditatedata .datatable table tbody .candidate {
+        gap: 0.8rem;
+    }
+
+    /* city vote page css */
+    .padding-right-votebtn {
+        padding-right: 0px;
+        display: block;
+    }
+
+    .votebtn button {
+        padding: 10px 32px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+
+    /* live-tv */
+    .tv-box {
+        background-color: #000000;
+        width: 100%;
+      }
 }

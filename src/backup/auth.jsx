@@ -10,7 +10,7 @@ const handleLogin = async (username, password) => {
             })
         });
         const data = await response.json();
-        console.log('Login response:', data);
+        // console.log('Login response:', data);
 
         // Store token in localStorage or state
         localStorage.setItem('token', data.token); // Assuming the token is in data.token
@@ -33,7 +33,7 @@ const getCurrentUser = async () => {
             },
         });
         const data = await response.json();
-        console.log('Current user:', data);
+        // console.log('Current user:', data);
         return data; // Return data if needed
     } catch (error) {
         console.error('Error fetching current user:', error);
@@ -56,7 +56,7 @@ const refreshSession = async (refreshToken) => {
             }),
         });
         const data = await response.json();
-        console.log('Refresh session response:', data);
+        // console.log('Refresh session response:', data);
 
         // Update token in localStorage or state
         localStorage.setItem('token', data.token); // Assuming the token is in data.token

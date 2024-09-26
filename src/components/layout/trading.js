@@ -20,7 +20,7 @@ const TradingNow = () => {
                 const response = await axios.post(`https://ishivaxservices.com/admin_panel/public/api/section_list?type_id=1&is_home_page=1`);
                 if (response.status === 200) {
                     setSections(response.data.result);
-                    console.log(response.data.result)
+                    // console.log(response.data.result)
                 } else {
                     setError("Failed to fetch sections");
                 }

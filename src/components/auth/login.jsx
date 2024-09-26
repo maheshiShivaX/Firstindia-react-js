@@ -6,36 +6,53 @@ import OtpInput from "react-otp-input";
 import axios from 'axios';
 import { Toaster, toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import '../home.css';
 const baseSmsUrl = process.env.REACT_APP_SMS_KEY;
+const baseUrl = process.env.REACT_APP_BASE_URL;
 const loginApiUrl = "https://ishivaxservices.com/admin_panel/public/api/login";
 
 const Login = () => {
     const [otp, setOtp] = useState("");
     const [ph, setPh] = useState("");
-    const [userId, setUserId] = useState("");
+    const [userData, setUserData] = useState("");
     const [showOtp, setShowOtp] = useState(false);
     const [loading, setLoading] = useState(false);
     const [sections, setSections] = useState([]);
     const [error, setError] = useState(null);
     const [user, setUser] = useState(false);
     const [generatedOtp, setGeneratedOtp] = useState('')
+    const [getUserProfile, setUserGetProfile] = useState([]);
     const navigate = useNavigate();
+    const userId = localStorage.getItem('userid');
+    const [pUserIdModel, setPUserIdModel] = useState({
+        id: userId
+    });
+
+    const validatePhoneNumber = (number) => {
+        const digits = number.replace(/\D/g, '');
+        return digits.length === 10;
+    };
 
     const sendOtp = async () => {
+        if (!validatePhoneNumber(ph)) {
+            toast.error("Phone number must be exactly 10 digits long.");
+            return;
+        }
         setLoading(true);
 
-        const apiUrl = `https://ecommandar.com/smsapi/api/Supersinger/OTPSend?pMobileNo=${encodeURIComponent(ph)}`;
+        const apiUrl = `https://ecommandar.com/smsapi/api/SentOtp/SentOtp`;
         try {
-            const response = await axios.get(apiUrl, {
-                timeout: 5000,
-            });
-            // console.log(response.data, "rgftgrghthgtyhty")
+            const response = await axios.post(apiUrl, {
+                mobileNo: ph
+            }, { timeout: 50000 });
 
-            setLoading(false);
-            setShowOtp(true);
-            setGeneratedOtp(response.data.data.otp);
-            // login();
-            toast.success("OTP Sent Successfully");
+            if (response.status === 200) {
+                toast.success("OTP Sent Successfully");
+                setShowOtp(true);
+                //     // setGeneratedOtp(response.data.data.otp);
+                setLoading(false);
+            }
+
         } catch (error) {
             console.error('Error:', error.message);
             setLoading(false);
@@ -62,14 +79,35 @@ const Login = () => {
     //     }
     // };
 
-    const verifyOtp = () => {
-        if (otp === generatedOtp) {
-            toast.success("OTP Verified Successfully");
-            login();
-        } else {
-            toast.error("Please enter the correct OTP.");
+    const verifyOtp = async () => {
+        if (!otp) {
+            toast.error("Please enter the OTP");
+            return;
         }
-    };
+
+        setLoading(true);
+
+        const apiUrl = `https://ecommandar.com/smsapi/api/SentOtp/VerifyOTP`;
+
+        try {
+            const response = await axios.post(apiUrl, {
+                mobileNo: ph,
+                OTP: otp,
+            });
+
+            if (response.status === 200) {
+                // toast.success("OTP Verified Successfully");
+                login();
+            } else {
+                toast.error("OTP Verification failed");
+            }
+        } catch (error) {
+            toast.error("Failed to Verify OTP");
+        } finally {
+            setLoading(false);
+        }
+
+    }
 
     const login = async () => {
         if (ph.trim() === "") {
@@ -77,13 +115,14 @@ const Login = () => {
             return;
         }
 
-        const mobileNo = `+${ph}`;
+        const mobileNo = `+91${ph}`;
         try {
             setLoading(true);
             const response = await axios.post(loginApiUrl, {
                 type: 3,
                 mobile: mobileNo
             });
+
             localStorage.setItem("userid", response.data.result[0].id);
             localStorage.setItem("mobile", response.data.result[0].mobile);
             setLoading(false);
@@ -91,7 +130,24 @@ const Login = () => {
                 toast.success("Login Successful");
                 localStorage.setItem('user', 'true');
                 setUser(true);
-                navigate("/ott");
+                if (response.data.result.length > 0) {
+                    try {
+                        const responses = await axios.post(`${baseUrl}get_profile`, { id: response.data.result[0].id });
+                        if (responses.status === 200) {
+                            if (responses.data.result[0].is_buy === 1) {
+                                navigate("/ott");
+                                // localStorage.clear();
+                            }
+                            else {
+                                navigate("/subscribtion");
+                            }
+                        } else {
+                            setError("Failed to fetch sections");
+                        }
+                    } catch (error) {
+                        setError("Failed to fetch sections. Please try again later.");
+                    }
+                }
             } else {
                 toast.error("Failed to login");
             }
@@ -102,12 +158,17 @@ const Login = () => {
         }
     };
 
+    const onReset = () => {
+        setShowOtp(false);
+        setPh("");
+    }
+
     return (
-        <div className='mt-4'>
+        <div className='mt-md-4 mt-1 mx-sm-0 mx-2'>
             <Toaster toastOptions={{ duration: 4000 }} />
             {!user ? (
                 <div className="d-flex justify-content-center">
-                    <div className="signuppage text-white p-5 col-md-7">
+                    <div className="signuppage text-white p-lg-5 p-4 col-lg-7 col-md-8 col-11" >
                         {showOtp ? (
                             <div className="optvarificationcontent">
                                 <span className="d-flex justify-content-center">
@@ -115,14 +176,7 @@ const Login = () => {
                                 </span>
                                 <h6 className="text-center mt-3">Enter Your OTP </h6>
                                 <OtpInput
-                                    inputStyle={{
-                                        width: "50px",
-                                        height: "50px",
-                                        fontSize: "20px",
-                                        margin: "5px",
-                                        borderRadius: "5px",
-                                        border: "2px solid black",
-                                    }}
+                                    className="otpinput justify-content-center"
                                     value={otp}
                                     onChange={setOtp}
                                     numInputs={6}
@@ -131,7 +185,7 @@ const Login = () => {
                                 />
                                 <div className="d-flex justify-content-center">
                                     <button
-                                        className="btn btn-primary mt-3 w-100 "
+                                        className="verifybtn mt-3 w-100 "
                                         onClick={verifyOtp}
                                     >
                                         {loading && (
@@ -143,14 +197,40 @@ const Login = () => {
                                         <span> Verify OTP</span>
                                     </button>
                                 </div>
+                                <div className="d-flex justify-content-center">
+                                    <a
+                                        className=" mt-3 w-100 "
+                                        onClick={() => onReset()}
+                                    >
+                                        {loading && (
+                                            <span
+                                                className="spinner-border spinner-border-sm"
+                                                style={{ marginRight: "10px" }}
+                                            ></span>
+                                        )}
+                                        <span>Reset</span>
+                                    </a>
+                                </div>
                             </div>
                         ) : (
                             <div className="loginform">
-                                <PhoneInput
-                                    country={"in"}
+                                {/* <PhoneInput
+                                    country="in"
                                     value={ph}
                                     onChange={setPh}
-                                />
+                                    disableDropdown={true} 
+                                /> */}
+                                <div className="input-group mobileinput">
+                                    <span className="input-group-text" style={{ background: 'transparent', color: '#ffffff90' }}>+91</span>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        value={ph}
+                                        onChange={(e) => setPh(e.target.value)}
+                                        placeholder="Enter mobile number"
+                                        maxLength={10} // Limit to 10 digits
+                                    />
+                                </div>
                                 <div className="">
                                     <button
                                         className="get-start-btn mt-3 w-100 "

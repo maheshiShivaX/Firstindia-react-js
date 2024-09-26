@@ -1,0 +1,165 @@
+
+/* homepopup */
+.homepopup {
+    display: none;
+}
+
+.homepopup.open {
+    display: block;
+}
+
+.closebtn {
+    text-align: center;
+}
+
+.closebtnhome button {
+    background-color: transparent;
+    border: transparent;
+    position: absolute;
+    right: -15px;
+    top: -18px;
+}
+
+.homepopup {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* width: 470px; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    color: #000;
+}
+
+.offerbanner img {
+    width: 100%;
+}
+
+.optvarificationcontent input{
+    width: 40px !important;
+    height:40px;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    /* height: 50px,
+    font-size: 20px,
+    margin: 5px,
+    borderRadius: 5px,
+    border: 2px solid black, */
+ }
+
+/* inputStyle={{
+    width: "50px",
+    height: "50px",
+    fontSize: "20px",
+    margin: "5px",
+    borderRadius: "5px",
+    border: "2px solid black",
+}} */
+.optvarificationcontent div{
+    justify-content:center ;
+}
+
+.verifybtn {
+    background-color: #f97316;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+  padding: 5px 0px;
+  font-weight: 600;
+
+}
+
+@media only screen and (max-width:260px) {
+
+    .homepopup-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .home .homeimagebg .homepagecontent .homeheading h1 {
+        font-size: 25px;
+    }
+    
+    .home .homeimagebg .homepagecontent .homeheading p {
+        font-size: 14px;
+    }
+
+    .optvarificationcontent input{
+        width: 25px !important;
+        height:25px;
+        font-size: 20px;
+        margin: 2px;
+        border-radius: 5px;
+        border: 2px solid black;
+     }
+}
+
+@media (min-width:260px) and (max-width:310px) {
+
+    .homepopup-container {
+        width: 90%;
+        padding: 0px;
+    }
+
+    .home .homeimagebg .homepagecontent .homeheading h1 {
+        font-size: 25px;
+    }
+    
+    .home .homeimagebg .homepagecontent .homeheading p {
+        font-size: 14px;
+    }
+
+    .optvarificationcontent input{
+        width: 25px !important;
+        height:25px;
+        font-size: 20px;
+        margin: 2px;
+        border-radius: 5px;
+        border: 2px solid black;
+     }
+}
+
+@media (min-width:310px) and (max-width:640px) {
+
+    .homepopup-container {
+        width: 90%;
+        padding: 0px;
+    }
+
+    .home .homeimagebg .homepagecontent .homeheading h1 {
+        font-size: 25px;
+    }
+    
+    .home .homeimagebg .homepagecontent .homeheading p {
+        font-size: 14px;
+    }
+
+    .optvarificationcontent input{
+        width: 30px !important;
+        height:30px;
+        font-size: 20px;
+        margin: 2px;
+        border-radius: 5px;
+        border: 2px solid black;
+     }
+}
+
+@media (min-width:640px) and (max-width:768px) {
+
+    .homepopup-container {
+        width: 400px;
+        padding: 0px;
+    }
+
+    .home .homeimagebg .homepagecontent .homeheading h1 {
+        font-size: 40px;
+    }
+    
+    .home .homeimagebg .homepagecontent .homeheading p {
+        font-size: 14px;
+    }
+}

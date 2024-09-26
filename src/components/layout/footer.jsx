@@ -1,5 +1,6 @@
 // Footer.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -13,10 +14,10 @@ const Footer = () => {
                                 <img src='../images/header-logo.png' alt='logo' />
                             </div>
                             <div className='social-icons'>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
+                                <ul className="list-inline">
+                                    <li className="list-inline-item">
                                         <a href="https://x.com/firstindiaplus?t=uFrVPRX-u6xiD8azst0iMQ&s=09" target="_blank" title="twitter">
-                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="social"
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="social"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M19.839 2H4.16104C2.96756 2 2 2.96756 2 4.16104V19.839C2 21.0324 2.96756 22 4.16104 22H19.839C21.0324 22 22 21.0324 22 19.839V4.16104C22 2.96756 21.0324 2 19.839 2ZM14.7566 18.9604L11.0401 13.5514L6.38696 18.9604H5.18435L10.5061 12.7746L5.18435 5.02934H9.24336L12.7627 10.1513L17.1689 5.02934H18.3715L13.2968 10.9283H13.2965L18.8156 18.9604H14.7566Z"
@@ -25,9 +26,9 @@ const Footer = () => {
 
                                         </a>
                                     </li>
-                                    <li class="list-inline-item">
+                                    <li className="list-inline-item">
                                         <a href="https://www.facebook.com/firstindiaplus?mibextid=ZbWKwL" target="_blank" title="facebook">
-                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="social"
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="social"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M19.0703 2H4.92969C3.31437 2 2 3.31437 2 4.92969V19.0703C2 20.6856 3.31437 22 4.92969 22H10.8281V14.9297H8.48438V11.4141H10.8281V9.03125C10.8281 7.09262 12.4051 5.51562 14.3438 5.51562H17.8984V9.03125H14.3438V11.4141H17.8984L17.3125 14.9297H14.3438V22H19.0703C20.6856 22 22 20.6856 22 19.0703V4.92969C22 3.31437 20.6856 2 19.0703 2Z"
@@ -35,10 +36,10 @@ const Footer = () => {
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="list-inline-item">
+                                    <li className="list-inline-item">
                                         <a href="https://www.instagram.com/firstindiaplus?igsh=MWpwcnB6b2N4cGNiNg==" target="_blank"
                                             title="instagram">
-                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="social"
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="social"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M17.814 5.70071C17.5463 5.70071 17.3285 5.91857 17.3285 6.18626C17.3285 6.45396 17.5463 6.67181 17.814 6.67181C18.0818 6.67181 18.2996 6.454 18.2996 6.18626C18.2996 5.91853 18.0818 5.70071 17.814 5.70071ZM12.0003 7.69544C9.62682 7.69544 7.6958 9.62646 7.6958 12C7.6958 14.3735 9.62682 16.3045 12.0003 16.3045C14.3739 16.3045 16.3049 14.3735 16.3049 12C16.3049 9.6265 14.3739 7.69544 12.0003 7.69544Z"
@@ -49,9 +50,9 @@ const Footer = () => {
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="list-inline-item" >
+                                    <li className="list-inline-item" >
                                         <a href="https://www.youtube.com/channel/UCj2cR01DMBAEp8LTjFCR9pg" target="_blank" title="youtube">
-                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="social"
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="social"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10.7144 10.0317V13.6825L14.0794 11.873L10.7144 10.0317Z"
                                                     fill="white" />
@@ -79,14 +80,14 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-5 text-md-end mt-lg-0 mt-4">
-                        <div class="footer-widget">
-                            <div class="widget">
-                                <div class="widget-header">
-                                    {/* <!-- <h2 class="widget-title">Production</h2> --> */}
+                    <div className="col-xl-6 col-md-5 text-md-end mt-lg-0 mt-4">
+                        <div className="footer-widget">
+                            <div className="widget">
+                                <div className="widget-header">
+                                    {/* <!-- <h2 className="widget-title">Production</h2> --> */}
                                 </div>
-                                <div class="widget-content footer-menu">
-                                    <a href="https://apps.apple.com/in/app/first-india-plus/id6478978812" target="_blank ">    <svg width="180" height="52" viewBox="0 0 180 52" fill="none" class="store"
+                                <div className="widget-content footer-menu">
+                                    <a href="https://apps.apple.com/in/app/first-india-plus/id6478978812" target="_blank ">    <svg width="180" height="52" viewBox="0 0 180 52" fill="none" className="store"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M179 46.003C179 48.7742 176.709 51.0189 173.874 51.0189H6.13243C3.2995 51.0189 1 48.7742 1 46.003V6.0035C1 3.23367 3.2995 0.981133 6.13243 0.981133H173.873C176.709 0.981133 178.999 3.23367 178.999 6.0035L179 46.003Z"
@@ -163,7 +164,7 @@ const Footer = () => {
                                             fill="white" />
                                     </svg></a>
                                     <a href="https://play.google.com/store/apps/details?id=com.firstindia.ott&hl=en_IN&gl=US" target="_blank">
-                                        <svg width="180" height="52" viewBox="0 0 180 52" fill="none" class="store"
+                                        <svg width="180" height="52" viewBox="0 0 180 52" fill="none" className="store"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M173.095 52H6.6575C2.99754 52 0 49.0734 0 45.5V6.5C0 2.92663 2.99754 2.74817e-06 6.6575 2.74817e-06H173.095C176.755 2.74817e-06 179.753 2.92663 179.753 6.5V45.5C179.753 49.0734 176.755 52 173.095 52Z"
@@ -173,24 +174,24 @@ const Footer = () => {
                                                 fill="#A6A6A6" />
                                             <path
                                                 d="M63.1364 13.3169C63.1364 14.4024 62.8035 15.2717 62.1478 15.9201C61.3938 16.6887 60.4118 17.0755 59.2085 17.0755C58.0584 17.0755 57.0764 16.6822 56.2709 15.9071C55.4636 15.1206 55.0609 14.1554 55.0609 13C55.0609 11.8446 55.4636 10.8794 56.2709 10.0994C57.0764 9.31775 58.0584 8.9245 59.2085 8.9245C59.781 8.9245 60.327 9.03987 60.8479 9.25437C61.3672 9.4705 61.7899 9.763 62.0962 10.1237L61.4005 10.8095C60.8662 10.1936 60.1389 9.88975 59.2085 9.88975C58.3697 9.88975 57.6423 10.1757 57.0248 10.7526C56.414 11.3311 56.1078 12.0802 56.1078 13C56.1078 13.9197 56.414 14.6754 57.0248 15.2539C57.6423 15.8242 58.3697 16.1167 59.2085 16.1167C60.0989 16.1167 60.8479 15.8242 61.4388 15.2474C61.8282 14.8655 62.0496 14.339 62.1078 13.6662H59.2085V12.727H63.0765C63.1231 12.9301 63.1364 13.1267 63.1364 13.3169Z"
-                                                fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10" />
+                                                fill="white" stroke="white" strokeWidth="0.16" strokeMiterlimit="10" />
                                             <path
                                                 d="M69.273 10.0604H65.6396V12.5304H68.9151V13.4696H65.6396V15.9396H69.273V16.8967H64.611V9.10324H69.273V10.0604Z"
-                                                fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10" />
+                                                fill="white" stroke="white" strokeWidth="0.16" strokeMiterlimit="10" />
                                             <path
                                                 d="M73.6037 16.8967H72.5751V10.0604H70.3465V9.10324H75.8339V10.0604H73.6037V16.8967Z"
-                                                fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10" />
+                                                fill="white" stroke="white" strokeWidth="0.16" strokeMiterlimit="10" />
                                             <path d="M79.8051 16.8967V9.10324H80.8321V16.8967H79.8051Z" fill="white"
-                                                stroke="white" stroke-width="0.16" stroke-miterlimit="10" />
+                                                stroke="white" strokeWidth="0.16" strokeMiterlimit="10" />
                                             <path
                                                 d="M85.3841 16.8967H84.3638V10.0604H82.1269V9.10324H87.621V10.0604H85.3841V16.8967Z"
-                                                fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10" />
+                                                fill="white" stroke="white" strokeWidth="0.16" strokeMiterlimit="10" />
                                             <path
                                                 d="M98.0101 15.8941C97.2228 16.6822 96.2475 17.0755 95.0841 17.0755C93.9141 17.0755 92.9387 16.6822 92.1515 15.8941C91.3659 15.1076 90.9748 14.1424 90.9748 13C90.9748 11.8576 91.3659 10.8924 92.1515 10.1059C92.9387 9.31775 93.9141 8.9245 95.0841 8.9245C96.2409 8.9245 97.2162 9.31775 98.0034 10.1124C98.7957 10.9054 99.1868 11.8641 99.1868 13C99.1868 14.1424 98.7957 15.1076 98.0101 15.8941ZM92.9121 15.2409C93.5046 15.8242 94.2253 16.1167 95.0841 16.1167C95.9363 16.1167 96.6636 15.8242 97.2495 15.2409C97.8403 14.6575 98.1399 13.9084 98.1399 13C98.1399 12.0916 97.8403 11.3425 97.2495 10.7591C96.6636 10.1757 95.9363 9.88325 95.0841 9.88325C94.2253 9.88325 93.5046 10.1757 92.9121 10.7591C92.3213 11.3425 92.0217 12.0916 92.0217 13C92.0217 13.9084 92.3213 14.6575 92.9121 15.2409Z"
-                                                fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10" />
+                                                fill="white" stroke="white" strokeWidth="0.16" strokeMiterlimit="10" />
                                             <path
                                                 d="M100.63 16.8967V9.10324H101.878L105.759 15.1645H105.804L105.759 13.6662V9.10324H106.786V16.8967H105.714L101.65 10.5365H101.605L101.65 12.0412V16.8967H100.63Z"
-                                                fill="white" stroke="white" stroke-width="0.16" stroke-miterlimit="10" />
+                                                fill="white" stroke="white" strokeWidth="0.16" strokeMiterlimit="10" />
                                             <path
                                                 d="M90.7218 28.2783C87.5944 28.2783 85.0396 30.602 85.0396 33.8081C85.0396 36.9883 87.5944 39.3364 90.7218 39.3364C93.8558 39.3364 96.4106 36.9883 96.4106 33.8081C96.4106 30.602 93.8558 28.2783 90.7218 28.2783ZM90.7218 37.1589C89.0058 37.1589 87.5295 35.776 87.5295 33.8081C87.5295 31.8143 89.0058 30.4558 90.7218 30.4558C92.4377 30.4558 93.9207 31.8143 93.9207 33.8081C93.9207 35.776 92.4377 37.1589 90.7218 37.1589ZM78.3238 28.2783C75.1898 28.2783 72.6417 30.602 72.6417 33.8081C72.6417 36.9883 75.1898 39.3364 78.3238 39.3364C81.4562 39.3364 84.006 36.9883 84.006 33.8081C84.006 30.602 81.4562 28.2783 78.3238 28.2783ZM78.3238 37.1589C76.6062 37.1589 75.1249 35.776 75.1249 33.8081C75.1249 31.8143 76.6062 30.4558 78.3238 30.4558C80.0398 30.4558 81.5161 31.8143 81.5161 33.8081C81.5161 35.776 80.0398 37.1589 78.3238 37.1589ZM63.5708 29.9731V32.3229H69.3179C69.1498 33.6359 68.7004 34.6011 68.0114 35.2739C67.1725 36.0864 65.866 36.9883 63.5708 36.9883C60.034 36.9883 57.2645 34.2014 57.2645 30.7483C57.2645 27.2952 60.034 24.5083 63.5708 24.5083C65.4832 24.5083 66.8746 25.2379 67.9015 26.1837L69.5975 24.5278C68.1612 23.1888 66.2505 22.1601 63.5708 22.1601C58.7208 22.1601 54.6448 26.013 54.6448 30.7483C54.6448 35.4835 58.7208 39.3364 63.5708 39.3364C66.1922 39.3364 68.1612 38.4979 69.709 36.9249C71.2952 35.3763 71.7895 33.1988 71.7895 31.4405C71.7895 30.8945 71.7429 30.3924 71.6597 29.9731H63.5708ZM123.898 31.7948C123.43 30.5581 121.987 28.2783 119.048 28.2783C116.135 28.2783 113.71 30.5191 113.71 33.8081C113.71 36.9054 116.11 39.3364 119.327 39.3364C121.929 39.3364 123.43 37.7878 124.048 36.8859L122.117 35.6298C121.473 36.5495 120.596 37.1589 119.327 37.1589C118.067 37.1589 117.164 36.595 116.584 35.4835L124.159 32.4236L123.898 31.7948ZM116.175 33.6359C116.11 31.5039 117.871 30.4119 119.133 30.4119C120.121 30.4119 120.96 30.8945 121.24 31.5851L116.175 33.6359ZM110.019 39H112.508V22.75H110.019V39ZM105.941 29.51H105.858C105.298 28.8633 104.232 28.2783 102.88 28.2783C100.044 28.2783 97.4508 30.7093 97.4508 33.826C97.4508 36.9249 100.044 39.3364 102.88 39.3364C104.232 39.3364 105.298 38.7465 105.858 38.0803H105.941V38.8733C105.941 40.9874 104.784 42.1233 102.918 42.1233C101.397 42.1233 100.453 41.0508 100.064 40.1489L97.8985 41.0313C98.5227 42.497 100.175 44.3008 102.918 44.3008C105.838 44.3008 108.301 42.6238 108.301 38.5434V28.6146H105.941V29.51ZM103.093 37.1589C101.377 37.1589 99.9407 35.7565 99.9407 33.826C99.9407 31.8776 101.377 30.4558 103.093 30.4558C104.784 30.4558 106.117 31.8776 106.117 33.826C106.117 35.7565 104.784 37.1589 103.093 37.1589ZM135.555 22.75H129.6V39H132.083V32.8429H135.555C138.313 32.8429 141.018 30.8945 141.018 27.7956C141.018 24.6984 138.306 22.75 135.555 22.75ZM135.62 30.5825H132.083V25.0104H135.62C137.474 25.0104 138.533 26.5135 138.533 27.7956C138.533 29.0534 137.474 30.5825 135.62 30.5825ZM150.97 28.2474C149.176 28.2474 147.311 29.0209 146.543 30.7353L148.747 31.6371C149.221 30.7353 150.093 30.4428 151.015 30.4428C152.304 30.4428 153.61 31.1984 153.63 32.5325V32.7031C153.181 32.4496 152.219 32.0743 151.035 32.0743C148.662 32.0743 146.244 33.3499 146.244 35.7305C146.244 37.908 148.188 39.3104 150.373 39.3104C152.044 39.3104 152.966 38.5743 153.545 37.7179H153.63V38.974H156.029V32.7405C156.029 29.8594 153.825 28.2474 150.97 28.2474ZM150.671 37.1524C149.859 37.1524 148.727 36.7591 148.727 35.776C148.727 34.5183 150.138 34.0356 151.36 34.0356C152.453 34.0356 152.966 34.2713 153.63 34.5816C153.435 36.0864 152.109 37.1524 150.671 37.1524ZM164.766 28.6033L161.912 35.6476H161.827L158.876 28.6033H156.198L160.632 38.4475L158.102 43.9254H160.697L167.529 28.6033H164.766ZM142.382 39H144.872V22.75H142.382V39Z"
                                                 fill="white" />
@@ -209,32 +210,32 @@ const Footer = () => {
                                             <defs>
                                                 <linearGradient id="paint0_linear_1_33" x1="29.0263" y1="40.6774"
                                                     x2="7.21544" y2="18.338" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#00A0FF" />
-                                                    <stop offset="0.0066" stop-color="#00A1FF" />
-                                                    <stop offset="0.2601" stop-color="#00BEFF" />
-                                                    <stop offset="0.5122" stop-color="#00D2FF" />
-                                                    <stop offset="0.7604" stop-color="#00DFFF" />
-                                                    <stop offset="1" stop-color="#00E3FF" />
+                                                    <stop stopColor="#00A0FF" />
+                                                    <stop offset="0.0066" stopColor="#00A1FF" />
+                                                    <stop offset="0.2601" stopColor="#00BEFF" />
+                                                    <stop offset="0.5122" stopColor="#00D2FF" />
+                                                    <stop offset="0.7604" stopColor="#00DFFF" />
+                                                    <stop offset="1" stopColor="#00E3FF" />
                                                 </linearGradient>
                                                 <linearGradient id="paint1_linear_1_33" x1="45.0505" y1="25.9982"
                                                     x2="12.8323" y2="25.9982" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#FFE000" />
-                                                    <stop offset="0.4087" stop-color="#FFBD00" />
-                                                    <stop offset="0.7754" stop-color="#FFA500" />
-                                                    <stop offset="1" stop-color="#FF9C00" />
+                                                    <stop stopColor="#FFE000" />
+                                                    <stop offset="0.4087" stopColor="#FFBD00" />
+                                                    <stop offset="0.7754" stopColor="#FFA500" />
+                                                    <stop offset="1" stopColor="#FF9C00" />
                                                 </linearGradient>
                                                 <linearGradient id="paint2_linear_1_33" x1="33.0572" y1="23.0151"
                                                     x2="3.47986" y2="-7.27893" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#FF3A44" />
-                                                    <stop offset="1" stop-color="#C31162" />
+                                                    <stop stopColor="#FF3A44" />
+                                                    <stop offset="1" stopColor="#C31162" />
                                                 </linearGradient>
                                                 <linearGradient id="paint3_linear_1_33" x1="9.71636" y1="51.7709"
                                                     x2="22.924" y2="38.2434" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#32A071" />
-                                                    <stop offset="0.0685" stop-color="#2DA771" />
-                                                    <stop offset="0.4762" stop-color="#15CF74" />
-                                                    <stop offset="0.8009" stop-color="#06E775" />
-                                                    <stop offset="1" stop-color="#00F076" />
+                                                    <stop stopColor="#32A071" />
+                                                    <stop offset="0.0685" stopColor="#2DA771" />
+                                                    <stop offset="0.4762" stopColor="#15CF74" />
+                                                    <stop offset="0.8009" stopColor="#06E775" />
+                                                    <stop offset="1" stopColor="#00F076" />
                                                 </linearGradient>
                                             </defs>
                                         </svg></a>
@@ -244,31 +245,31 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div class="copyright container-screen">
-                <div class="">
-                    <div class="row justify-content-lg-between">
+            <div className="copyright container-screen">
+                <div className="">
+                    <div className="row justify-content-lg-between">
                         <div className='col-lg-6 d-md-flex designdevelop'>
-                            <div class="col-md-6 developby text-lg-start text-md-end designdevelop">
-                                <p className='mb-0'><a class="acls" href="https://ishivax.com/" target="_blank">Design & Developed By <strong>iShivax®</strong></a></p>
+                            <div className="col-md-6 developby text-lg-start text-md-end designdevelop">
+                                <p className='mb-0'><a className="acls" href="https://ishivax.com/" target="_blank">Design & Developed By <strong>iShivax®</strong></a></p>
                             </div>
-                            <div class="col-md-6 reserved designdevelop">
+                            <div className="col-md-6 reserved designdevelop">
                                 <p className='mb-0'>© Copyright 2024, All Rights Reserved</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 mt-lg-0 mt-2 designdevelop">
-                            <div class="copyright-menu">
+                        <div className="col-lg-6 mt-lg-0 mt-2 designdevelop">
+                            <div className="copyright-menu">
                                 <ul className='d-md-flex justify-content-lg-end justify-content-center'>
                                     <li>
-                                        <a href='' >About Us</a>
+                                        <Link to="/public/aboutus" >About Us</Link>
                                     </li>
                                     <li>
-                                        <a href=''>Terms & Conditions</a>
+                                        <Link to="/public/terms">Terms & Conditions</Link>
                                     </li>
                                     <li>
-                                        <a href=''>Privacy Policy</a>
+                                        <Link to="/public/privatepolicy">Privacy Policy</Link>
                                     </li>
                                     <li>
-                                        <a href=''>Refund & Cancellation Policy</a>
+                                        <Link to="/public/returnpolicy">Refund & Cancellation Policy</Link>
                                     </li>
                                 </ul>
                             </div>

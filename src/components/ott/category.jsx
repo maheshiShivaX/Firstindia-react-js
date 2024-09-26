@@ -12,7 +12,7 @@ const Category = () => {
     const [swiper, setSwiper] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const id = localStorage.getItem('id');
-    console.log(id,'id')
+    // console.log(id,'id')
 
     useEffect(() => {
         const fetchSections = async () => {
@@ -25,7 +25,7 @@ const Category = () => {
                 }
 
                 const response = await axios.post(url);
-                console.log(response,"fgfgfgfgffgfgfgfgfgfgfgfgfgfgfg")
+                // console.log(response,"fgfgfgfgffgfgfgfgfgfgfgfgfgfgfg")
                 if (response.status === 200) {
                     setSections(response.data.result);
                 } else {

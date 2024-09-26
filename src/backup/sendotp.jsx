@@ -28,7 +28,7 @@ const SendOtp = () => {
         // Simulating OTP generation
         const otp = idGenerator("REACTOTP");
         setOtp(otp);
-        console.log('Generated OTP:', otp);
+        // console.log('Generated OTP:', otp);
     };
 
     const handleChange = (event) => {
@@ -52,7 +52,7 @@ const SendOtp = () => {
 
         axios.get(apiUrl)
             .then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
                 setLoading(false);
                 toast.success('OTP Sent Successfully');
             })

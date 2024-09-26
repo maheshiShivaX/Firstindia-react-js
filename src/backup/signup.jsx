@@ -20,7 +20,7 @@ const SignUpForm = () => {
                 }),
             });
             const data = await response.json();
-            console.log('SignUp response:', data);
+            // console.log('SignUp response:', data);
 
         } catch (error) {
             console.error('Error signing up:', error);

@@ -17,7 +17,7 @@ const Vote = () => {
         const fetchSections = async () => {
             try {
                 const response = await axios.get(`${baseUrl}get_audition_list/current`);
-                console.log(response, "getaudition list")
+                // console.log(response, "getaudition list")
                 if (response.status === 200) {
                     setAuditionCity(response.data.result);
                 } else {
@@ -42,7 +42,7 @@ const Vote = () => {
                     voting_type: "prizemoney",
                     audition_id: 0
                 });
-                console.log(response, "voting list")
+                // console.log(response, "voting list")
                 if (response.status === 200) {
                     setCandidateData(response.data.result);
                 } else {
