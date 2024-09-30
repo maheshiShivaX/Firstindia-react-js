@@ -28,29 +28,34 @@ const Login = () => {
         id: userId
     });
 
-    const validatePhoneNumber = (number) => {
-        const digits = number.replace(/\D/g, '');
-        return digits.length === 10;
+    const validatePhoneNumber = (phone) => {
+        const isValid = /^\d{10}$/.test(phone) && parseInt(phone[0], 10) >= 6;
+        return isValid;
     };
 
     const sendOtp = async () => {
         if (!validatePhoneNumber(ph)) {
-            toast.error("Phone number must be exactly 10 digits long.");
+            toast.error("Please Enter Valid Mobile Number");
             return;
         }
         setLoading(true);
 
-        const apiUrl = `https://ecommandar.com/smsapi/api/SentOtp/SentOtp`;
+        const apiUrl = `https://ecommandar.com/smsapi/api/SentOtp/fiss`;
         try {
             const response = await axios.post(apiUrl, {
-                mobileNo: ph
+                mobileNo: `+91${ph}`
             }, { timeout: 50000 });
+            // console.log(response, 'responsefirstindia')
 
             if (response.status === 200) {
-                toast.success("OTP Sent Successfully");
-                setShowOtp(true);
-                //     // setGeneratedOtp(response.data.data.otp);
-                setLoading(false);
+                if (response.data.isSuccess === 1) {
+                    toast.success("OTP Sent Successfully");
+                    setShowOtp(true);
+                    // setGeneratedOtp(response.data.data.otp);
+                    setLoading(false);
+                } else {
+                    toast.error("OTP send failed");
+                }
             }
 
         } catch (error) {
@@ -91,16 +96,17 @@ const Login = () => {
 
         try {
             const response = await axios.post(apiUrl, {
-                mobileNo: ph,
+                mobileNo: `+91${ph}`,
                 OTP: otp,
             });
-
-            if (response.status === 200) {
-                // toast.success("OTP Verified Successfully");
-                login();
-            } else {
-                toast.error("OTP Verification failed");
+            if (response.status == 200) {
+                if (response.data.isSuccess === 1) {
+                    login();
+                } else {
+                    toast.error("OTP Verification failed");
+                }
             }
+
         } catch (error) {
             toast.error("Failed to Verify OTP");
         } finally {
@@ -116,12 +122,15 @@ const Login = () => {
         }
 
         const mobileNo = `+91${ph}`;
+
         try {
             setLoading(true);
             const response = await axios.post(loginApiUrl, {
                 type: 3,
                 mobile: mobileNo
             });
+
+            // console.log(response,'responsesdsdsddss')
 
             localStorage.setItem("userid", response.data.result[0].id);
             localStorage.setItem("mobile", response.data.result[0].mobile);
@@ -135,7 +144,7 @@ const Login = () => {
                         const responses = await axios.post(`${baseUrl}get_profile`, { id: response.data.result[0].id });
                         if (responses.status === 200) {
                             if (responses.data.result[0].is_buy === 1) {
-                                navigate("/ott");
+                                // navigate("/ott");
                                 // localStorage.clear();
                             }
                             else {
@@ -228,7 +237,7 @@ const Login = () => {
                                         value={ph}
                                         onChange={(e) => setPh(e.target.value)}
                                         placeholder="Enter mobile number"
-                                        maxLength={10} // Limit to 10 digits
+                                        maxLength={10}
                                     />
                                 </div>
                                 <div className="">

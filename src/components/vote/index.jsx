@@ -43,7 +43,7 @@ const Vote = () => {
                                     })
                                     if (responseVotion.data.status === 200) {
                                         // console.log('Voting successful:', responseVotion);
-                                        setIsVoteSuccess(true)
+                                        setIsVoteSuccess(true);
                                         // getVotingList(userId);
                                         setButton(true)
                                     } else {

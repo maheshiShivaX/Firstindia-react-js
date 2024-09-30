@@ -32,14 +32,14 @@ const MyProfile = () => {
                             <h1 className="">My Profile</h1>
                         </div>
                         <div className="content mt-4">
-                            <div className="profile-content">
+                            {/* <div className="profile-content">
                                 <h5>Name :</h5>
                                 <span>{getUserProfile?.name}</span>
                             </div>
                             <div className="profile-content">
                                 <h5>Email Id :</h5>
                                 <span>{getUserProfile?.email}</span>
-                            </div>
+                            </div> */}
                             <div className="profile-content">
                                 <h5>Mobile No :</h5>
                                 <span>{getUserProfile?.mobile}</span>
