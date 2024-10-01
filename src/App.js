@@ -16,6 +16,7 @@ import AboutUs from './components/aboutus';
 import Terms from './components/terms';
 import PrivatePolicy from './components/privatepolicy';
 import ReturnPolicy from './components/returnpolicy';
+import Topvotelist from './components/topvotelist';
 
 function RedirectToExternalUrl() {
   return <Navigate to="/downloads/" replace />
@@ -32,7 +33,7 @@ function App() {
         <Route exact path="live" element={<Live />} />
         <Route exact path="subscribtion" element={<Subscribtion />} />
         <Route exact path="paymentgateway" element={<PaymentGateway />} />
-        <Route exact path="public/topvotelist" element={<TopTenVote />} />
+        <Route exact path="public/topvotelist" element={<Topvotelist />} />
         <Route exact path="vote/:id" element={<Vote />} />
         <Route exact path="myprofile" element={<MyProfile />} />
         <Route exact path="public/aboutus" element={<AboutUs />} />

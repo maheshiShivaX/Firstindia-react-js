@@ -144,7 +144,7 @@ const Login = () => {
                         const responses = await axios.post(`${baseUrl}get_profile`, { id: response.data.result[0].id });
                         if (responses.status === 200) {
                             if (responses.data.result[0].is_buy === 1) {
-                                // navigate("/ott");
+                                navigate("/ott");
                                 // localStorage.clear();
                             }
                             else {
