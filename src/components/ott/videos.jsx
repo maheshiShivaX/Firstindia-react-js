@@ -49,7 +49,7 @@ const Videos = ({ sections }) => {
                     setError("Failed to fetch video");
                 }
             } catch (error) {
-                console.error('Error', error);
+                // console.error('Error', error);
                 setError("Please try again later.");
             } finally {
                 setLoading(false);

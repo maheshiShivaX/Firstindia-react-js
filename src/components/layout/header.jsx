@@ -182,9 +182,9 @@ const Header = () => {
                                 <li className="nav-item" >
                                     <span className="nav-link hover-color" onClick={onPlayLive}>Live TV</span>
                                 </li>
-                                <li className="nav-item" onClick={closeMenu}>
+                                {/* <li className="nav-item" onClick={closeMenu}>
                                     <Link to="/public/topvotelist" className='nav-link'>Voting</Link>
-                                </li>
+                                </li> */}
                                 {error ? (
                                     <p>Error: {error}</p>
                                 ) : menu !== null ? (

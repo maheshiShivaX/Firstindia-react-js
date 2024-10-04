@@ -23,7 +23,7 @@ const SignUpForm = () => {
             // console.log('SignUp response:', data);
 
         } catch (error) {
-            console.error('Error signing up:', error);
+            // console.error('Error signing up:', error);
         }
     };
 

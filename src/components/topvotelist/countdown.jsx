@@ -9,19 +9,19 @@ const Countdown = () => {
     });
 
     useEffect(() => {
-        updateTimeRemaining();
+        updateTimeRemaining(); // Initialize timer on mount
         const timerId = setInterval(() => {
-            updateTimeRemaining();
+            updateTimeRemaining(); // Update every second
         }, 1000);
 
         return () => {
-            clearInterval(timerId);
+            clearInterval(timerId); // Clean up interval on unmount
         };
     }, []);
 
     const updateTimeRemaining = () => {
         const now = new Date();
-        const target = new Date(2024, 9, 2, 19, 0, 0); 
+        const target = new Date(2024, 9, 3, 19, 0, 0); // Target date: October 3rd, 2024, 7 PM
 
         const distance = target.getTime() - now.getTime();
 

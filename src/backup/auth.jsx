@@ -17,7 +17,7 @@ const handleLogin = async (username, password) => {
 
         return data; // Return data in case you need to handle it further
     } catch (error) {
-        console.error('Error logging in:', error);
+        // console.error('Error logging in:', error);
         throw new Error('Failed to log in');
     }
 };
@@ -36,7 +36,7 @@ const getCurrentUser = async () => {
         // console.log('Current user:', data);
         return data; // Return data if needed
     } catch (error) {
-        console.error('Error fetching current user:', error);
+        // console.error('Error fetching current user:', error);
         throw new Error('Failed to fetch current user');
     }
 };
@@ -63,7 +63,7 @@ const refreshSession = async (refreshToken) => {
 
         return data; // Return data if needed
     } catch (error) {
-        console.error('Error refreshing session:', error);
+        // console.error('Error refreshing session:', error);
         throw new Error('Failed to refresh session');
     }
 };

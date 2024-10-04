@@ -25,7 +25,7 @@ const TradingNow = () => {
                     setError("Failed to fetch sections");
                 }
             } catch (error) {
-                console.error('Error fetching data:', error);
+                // console.error('Error fetching data:', error);
                 setError("Failed to fetch sections. Please try again later.");
             }
         };

@@ -95,7 +95,7 @@ const PaymentGateway = () => {
       }
     } catch (error) {
       setError("Failed to create order. Please try again later.");
-      console.error('Error creating order:', error);
+      // console.error('Error creating order:', error);
     }
   };
 
@@ -144,7 +144,7 @@ const PaymentGateway = () => {
             }
           }
         } catch (error) {
-          console.error('Error updating order status:', error);
+          // console.error('Error updating order status:', error);
         }
       }
     }).render('#paypal-button-container');

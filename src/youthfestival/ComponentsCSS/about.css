@@ -1,0 +1,325 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Section styling */
+  .youthfestival .about-section {
+    padding: 50px 20px;
+    background-color: white;
+  }
+  .youthfestival .justified-text {
+    text-align: justify;
+  }
+  .youthfestival .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .youthfestival .about-text {
+    flex: 1;
+    padding-right: 20px;
+    color: #d73d55;
+  }
+  
+  .youthfestival .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+  }
+  
+  .youthfestival .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: black;
+  }
+  
+  .youthfestival .about-image {
+    flex: 1;
+  }
+  
+  .youthfestival .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablets and below */
+  @media (max-width: 768px) {
+    .youthfestival .about-container {
+      flex-direction: column;
+    }
+  
+    .youthfestival .about-text {
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .youthfestival .about-image {
+      margin-top: 20px;
+    }
+  
+    .youthfestival .about-text h2 {
+      font-size: 2rem;
+    }
+  
+    .youthfestival .about-text p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Mobile phones */
+  @media (max-width: 480px) {
+    .youthfestival .about-text h2 {
+      font-size: 1.8rem;
+    }
+  
+    .youthfestival .about-text p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .youthfestival .about-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    gap: 1.5rem; /* Space between list items */
+  }
+  
+  .youthfestival .about-list li {
+    background-color: #f0f0f0; /* Light background for list items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1rem; /* Padding inside list items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+  }
+  
+  .youthfestival .about-list li:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .youthfestival .about-list {
+        padding: 1rem; /* Add padding for smaller screens */
+    }
+  
+    .youthfestival .about-list li {
+        padding: 0.8rem; /* Adjust padding for smaller screens */
+    }
+  }
+  .youthfestival .shutter img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .youthfestival .shut {
+    max-width: 600px;
+  }
+  
+  @media (max-width: 992px) {
+    .youthfestival .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .youthfestival .shut {
+        padding-left: 0;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .youthfestival .shut {
+        padding-left: 50px;
+    }
+  }
+  
+  .youthfestival p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  .youthfestival h2 {
+    font-size: 2rem;
+  }
+  
+  .youthfestival .strong {
+    font-weight: bold;
+  }
+  .youthfestival .shutter img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .youthfestival .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .youthfestival .shut, .shutter {
+    padding: 15px;
+  }
+  
+  @media (min-width: 992px) {
+    .youthfestival .shutter {
+        flex: 0 0 30%; /* 30% of the screen for the image */
+    }
+  
+    .youthfestival .shut {
+        flex: 0 0 70%; /* 70% of the screen for the text */
+        padding-left: 50px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .youthfestival .d-flex {
+        flex-direction: column; /* Stacking on smaller screens */
+    }
+  }
+  
+  .youthfestival p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  .youthfestival h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .youthfestival .strong {
+    font-weight: bold;
+  }
+  
+  .youthfestival .awards-container {
+    max-width: 800px; /* Max width for larger screens */
+    margin: 20px auto; /* Centering the container */
+    padding: 20px; /* Padding for the container */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .youthfestival h2 {
+    text-align: center; /* Center the heading */
+    color: #d73d55; /* Darker text color */
+    
+    margin-bottom: 15px; /* Space below the heading */
+  }
+  
+  .youthfestival .awards-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+  }
+  
+  .youthfestival .awards-list li {
+    background-color: #fff; /* White background for list items */
+    margin: 10px 0; /* Margin between items */
+    padding: 15px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    
+  }
+  
+  .youthfestival .awards-list li:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .youthfestival .awards-container {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+  
+    .youthfestival .awards-list li {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  .youthfestival .about-text3 {
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .youthfestival .about-text1 p {
+    display: flex; /* Use Flexbox for alignment */
+    align-items: flex-start; /* Align items to the start */
+    justify-content: flex-start; /* Align text to the left */
+    text-align: justify; /* Justify text for better readability */
+    margin-bottom: 1.5rem; /* Spacing between paragraphs */
+  }
+  
+  strong {
+    color: #d73d55; /* Use a brand color for emphasis */
+  }
+  
+  @media (max-width: 768px) {
+    .youthfestival .about-text1 {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .youthfestival .about-text1 p {
+        font-size: 0.9rem; /* Slightly smaller text on smaller devices */
+    }
+  }
+  
+  .youthfestival .about-containerx {
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center; /* Center align vertically */
+    margin: 20px; /* Add margin for spacing */
+    padding: 20px; /* Add padding for inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .youthfestival .about-imagex {
+    flex: 1; /* Allow image section to grow */
+    margin-right: 20px; /* Space between image and text */
+  }
+  
+  .youthfestival .about-textx {
+    flex: 2; /* Allow text section to grow more */
+  }
+  
+  .youthfestival .img-fluid {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .youthfestival .justified-text {
+    margin-bottom: 1rem; /* Space between paragraphs */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .youthfestival .about-containerx {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+  
+    .youthfestival .about-imagex {
+        margin-right: 0; /* Remove margin on smaller screens */
+        margin-bottom: 15px; /* Space below the image */
+    }
+  
+    .youthfestival .about-textx {
+        text-align: center; /* Center text on smaller screens */
+    }
+  }

@@ -1,0 +1,49 @@
+/* General styling for the logo container */
+.youthfestival .logo-c {
+    display: inline-block;
+    margin: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for any effect */
+  }
+  
+  /* Styling the Vite logo */
+  .youthfestival .logo {
+    height: 100px; /* Adjust height */
+    width: auto;   /* Maintain aspect ratio */
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2)); /* Add shadow effect */
+  }
+  
+  /* Hover effect */
+  .youthfestival .logo:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+
+  .youthfestival .navbar-nav {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  
+  .youthfestival .navlink{
+    font-size: larger;
+    display: flex;
+    align-items:center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: inherit;
+  }
+  .youthfestival .navlink:hover{
+    color: #d73d55;
+  }
+  @media (max-width: 991.98px) { /* Adjust breakpoint as needed */
+    .youthfestival .navbar-nav {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    .youthfestival .nav-item {
+      margin-right: 0; /* Reset margin for vertical layout */
+      margin-bottom: 10px; /* Optional: Adjust spacing between stacked menu items */
+    }
+  }
+  

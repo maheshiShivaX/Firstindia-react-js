@@ -1,0 +1,316 @@
+.youthfestival .footer-body{
+    margin: 0;
+    padding: 0;
+  }
+  .youthfestival a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .youthfestival .pg-footer {
+    font-family: 'Roboto', sans-serif;
+  }
+  .youthfestival .footer {
+      background-color: black;
+      color: #fff;
+  }
+  .youthfestival .footer-wave-svg {
+      background-color: transparent;
+      display: block;
+      height: 30px;
+      position: relative;
+      top: -1px;
+      width: 100%;
+  }
+  .youthfestival .footer-wave-path {
+      fill: #d73d55;
+  }
+  
+  .youthfestival .footer-content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1230px;
+      padding: 40px 15px 450px;
+      position: relative;
+  }
+  
+  .youthfestival .footer-content-column {
+      box-sizing: border-box;
+      float: left;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 100%;
+      color: #fff;
+  }
+  
+  .youthfestival .footer-content-column ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .youthfestival .footer-logo-link {
+      display: inline-block;
+  }
+  .youthfestival .footer-menu {
+      margin-top: 30px;
+  }
+  
+  .youthfestival  .footer-menu-name {
+      color: #fffff2;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      line-height: 18px;
+      margin-bottom: 0;
+      margin-top: 0;
+      text-transform: uppercase;
+  }
+  .youthfestival  .footer-menu-list {
+      list-style: none;
+      margin-bottom: 0;
+      margin-top: 10px;
+      padding-left: 0;
+  }
+  .youthfestival .footer-menu-list li {
+      margin-top: 5px;
+  }
+  
+  .youthfestival .footer-call-to-action-description {
+      color: #fffff2;
+      margin-top: 10px;
+      margin-bottom: 20px;
+  }
+  .youthfestival .footer-call-to-action-button:hover {
+      background-color: #fffff2;
+      color: #d73d55;
+  }
+  .youthfestival .button:last-of-type {
+      margin-right: 0;
+  }
+  .youthfestival .footer-call-to-action-button {
+      background-color: #d73d55;
+      border-radius: 21px;
+      color: #fffff2;
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      line-height: 18px;
+      padding: 12px 30px;
+      margin: 0 10px 10px 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color .2s;
+      cursor: pointer;
+      position: relative;
+  }
+  .youthfestival .footer-call-to-action {
+      margin-top: 30px;
+  }
+  .youthfestival .footer-call-to-action-title {
+      color: #fffff2;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      line-height: 18px;
+      margin-bottom: 0;
+      margin-top: 0;
+      text-transform: uppercase;
+  }
+  .youthfestival .footer-call-to-action-link-wrapper {
+      margin-bottom: 0;
+      margin-top: 10px;
+      color: #fff;
+      text-decoration: none;
+  }
+  .youthfestival .footer-call-to-action-link-wrapper a {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  
+  
+  
+  
+  .youthfestival .footer-social-links {
+      bottom: 0;
+      height: 54px;
+      position: absolute;
+      right: 0;
+      width: 236px;
+  }
+  
+  
+  .youthfestival .footer-social-amoeba-path {
+      fill: #d73d55;
+  }
+  
+  .youthfestival .footer-social-link.linkedin {
+      height: 26px;
+      left: 3px;
+      top: 11px;
+      width: 26px;
+  }
+  
+  .youthfestival .footer-social-link {
+      display: block;
+      padding: 10px;
+      position: absolute;
+  }
+  
+  .youthfestival .hidden-link-text {
+      position: absolute;
+      clip: rect(1px 1px 1px 1px);
+      clip: rect(1px,1px,1px,1px);
+      -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+      clip-path: inset(0px 0px 99.9% 99.9%);
+      overflow: hidden;
+      height: 1px;
+      width: 1px;
+      padding: 0;
+      border: 0;
+      top: 50%;
+  }
+  
+  .youthfestival .footer-social-icon-svg {
+      display: block;
+      width: 30px;
+  }
+  
+  .youthfestival .footer-social-icon-path {
+      fill: #fffff2;
+      transition: fill .2s;
+  }
+  
+  .youthfestival .footer-social-link.twitter {
+      height: 28px;
+      left: 62px;
+      top: 3px;
+      width: 28px;
+  }
+  
+  .youthfestival .footer-social-link.youtube {
+      height: 24px;
+      left: 123px;
+      top: 12px;
+      width: 24px;
+  }
+  
+  .youthfestival .footer-social-link.github {
+      height: 34px;
+      left: 172px;
+      top: 7px;
+      width: 34px;
+  }
+  
+  .youthfestival .footer-copyright {
+      background-color: #d73d55;
+      color: #fff;
+      padding: 15px 30px;
+    text-align: center;
+  }
+  
+  .youthfestival .footer-copyright-wrapper {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+  }
+  
+  .youthfestival .footer-copyright-text {
+    color: #fff;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      margin-bottom: 0;
+      margin-top: 0;
+  }
+  
+  .youthfestival .footer-copyright-link {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  /* Media Query For different screens */
+  @media (min-width:320px) and (max-width:479px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    .youthfestival .footer-content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1230px;
+      padding: 40px 15px 1050px;
+      position: relative;
+    }
+  }
+  @media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
+    .youthfestival .footer-content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1230px;
+      padding: 40px 15px 1050px;
+      position: relative;
+    }
+  }
+  @media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .youthfestival .footer-content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1230px;
+      padding: 40px 15px 1050px;
+      position: relative;
+    }
+  }
+  @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+  
+  }
+  @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+  
+  }
+  @media (min-width:1281px) { /* hi-res laptops and desktops */
+  
+  }
+  
+  
+  @media (min-width: 760px) {
+    .youthfestival .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 450px;
+        position: relative;
+    }
+  
+    .youthfestival .footer-wave-svg {
+        height: 50px;
+    }
+  
+    .youthfestival .footer-content-column {
+        width: 24.99%;
+    }
+  }
+  @media (min-width: 568px) {
+    /* .footer-content-column {
+        width: 49.99%;
+    } */
+  }
+  
+  .youthfestival .social-icons {
+      display: flex; /* Use flexbox to arrange items in a row */
+      justify-content: center; /* Center align the icons */
+      gap: 15px; /* Space between icons, adjust as needed */
+      margin-top: 10px; /* Space above the icons */
+    }
+    
+    .youthfestival .social-icons img {
+      width: 40px; /* Set a specific size for the icons */
+      height: auto; /* Maintain aspect ratio */
+      transition: transform 0.3s; /* Smooth scaling on hover */
+    }
+    
+    .youthfestival .social-icons img:hover {
+      transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        .youthfestival .social-icons img {
+        width: 30px; /* Smaller size for smaller screens */
+      }
+    }

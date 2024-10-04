@@ -57,7 +57,7 @@ const SendOtp = () => {
                 toast.success('OTP Sent Successfully');
             })
             .catch((error) => {
-                console.error(error);
+                // console.error(error);
                 setLoading(false);
                 toast.error('Failed to send OTP');
             });

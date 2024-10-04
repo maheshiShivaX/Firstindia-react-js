@@ -1,0 +1,23 @@
+.youthfestival .payment_failed  {
+    color: #000;
+}
+
+.youthfestival  .payment_status {
+    background-color: #ffffff;
+}
+
+.youthfestival  .payment_status .payment_status_box{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px 40px;
+    border-radius: 4px;
+}
+
+.youthfestival .go_home_btn  button,.youthfestival .go_home_btn a{
+    background: #d73d55;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    width: 100%;
+}

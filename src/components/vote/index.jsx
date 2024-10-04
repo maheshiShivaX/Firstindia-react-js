@@ -54,7 +54,7 @@ const Vote = () => {
                                     alert('Subscribe now to First India Plus for Voting!');
                                 }
                             } catch {
-                                console.error('Error fetching profile:', error);
+                                // console.error('Error fetching profile:', error);
                             }
                         }
                     }

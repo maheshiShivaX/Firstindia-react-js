@@ -1,0 +1,127 @@
+/* sponsor.css */
+.youthfestival .bg-neutral-800 {
+    background-color: white; /* Dark neutral background */
+    padding: 20px 0;
+  }
+  
+  .youthfestival .text-center {
+    text-align: center;
+  }
+  
+  .youthfestival .text-black {
+    color: black;
+  }
+  
+  .youthfestival .text-neutral-500 {
+    color: #6c757d;
+  }
+  
+  .youthfestival .py-20 {
+    padding: 5rem 0;
+  }
+  
+  .youthfestival .mt-10 {
+    margin-top: 2.5rem;
+  }
+  
+  .youthfestival .max-w-5xl {
+    max-width: 1280px; /* Adjust for max width */
+  }
+  
+  .youthfestival .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .youthfestival .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .youthfestival .xl\:px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .youthfestival .sponsor-logo {
+    margin: 10px;
+    flex: 0 1 auto; /* Ensures logos don't shrink beyond their natural width */
+    text-align: center;
+    max-width: 150px; /* Max width for logos */
+  }
+  
+  .youthfestival .sponsor-logo1 {
+    margin: 10px;
+    flex: 0 1 auto; /* Ensures logos don't shrink beyond their natural width */
+    text-align: center;
+    max-width: 100px; /* Max width for logos */
+  }
+  
+  .youthfestival .sponsor-logo img {
+    width: 100%; /* Make the image responsive to container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .youthfestival .sponsor-logo1 img {
+    width: 100%; /* Make the image responsive to container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Flexbox Container */
+  .youthfestival .d-flex {
+    display: flex;
+    justify-content: space-around; /* Space out logos horizontally */
+    align-items: center; /* Center align logos vertically */
+    flex-wrap: nowrap; /* Prevent logos from wrapping initially */
+    overflow-x: auto; /* Allow horizontal scroll on small screens */
+    padding: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .youthfestival .d-flex {
+        justify-content: space-between;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+  
+    .youthfestival .sponsor-logo {
+        max-width: 190px; /* Adjust logo size for smaller screens */
+    }
+    .youthfestival .sponsor-logo1 {
+      max-width: 90px; /* Adjust logo size for smaller screens */
+  }
+  }
+  
+  @media (max-width: 768px) {
+    .youthfestival .d-flex {
+        justify-content: center;
+        flex-wrap: wrap; /* Logos wrap on small devices */
+    }
+  
+    .youthfestival .sponsor-logo {
+        flex: 1 1 100px; /* Ensure logos take appropriate space */
+        max-width: 150px;
+    }
+    .youthfestival .sponsor1-logo {
+      flex: 1 1 100px; /* Ensure logos take appropriate space */
+      max-width: 100px;
+  }
+  }
+  
+  @media (max-width: 480px) {
+    .youthfestival .sponsor-logo {
+        flex: 1 1 70px;
+        max-width: 150px;
+    }
+    .youthfestival .sponsor1-logo {
+      flex: 1 1 70px;
+      max-width: 70px;
+  }
+  .youthfestival h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+  
+    .youthfestival p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+  }

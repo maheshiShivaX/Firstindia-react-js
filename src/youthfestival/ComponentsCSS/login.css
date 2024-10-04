@@ -1,0 +1,45 @@
+.youthfestival .login_form {
+    max-width: 500px;
+}
+
+.youthfestival .login_main .login_form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.youthfestival .login_main .login_form input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.youthfestival .login_form h1 {
+    font-weight: 500;
+}
+
+.youthfestival .form_field {
+    margin-top: 10px;
+}
+
+.youthfestival .login_button  {
+    padding-top: 15px;
+}
+
+.youthfestival .login_button button{
+    background: #d73d55;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 100%;
+    padding: 6px 5px;
+    border-color: #d73d55;
+    border: 1px solid #d73d55;
+    border-radius: 3px;
+    font-size: 20px;
+}

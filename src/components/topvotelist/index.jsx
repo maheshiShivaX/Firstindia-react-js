@@ -48,9 +48,10 @@ const Topvotelist = () => {
         const getProfile = async () => {
             try {
                 const response = await axios.post(`${baseUrl}get_profile`, { id: userId });
-                console.log(response.data.result, "response.data.result1")
+                // console.log(response.data.result, "response.data.result1")
                 if (response.data.result != null) {
                     setUserGetProfile(response.data.result[0]);
+                    // console.log(response,'responseresponseresponseresponseresponseresponse')
                 }
 
             } catch (error) {
@@ -72,6 +73,15 @@ const Topvotelist = () => {
             navigate('/');
             return;
         }
+
+      if(userId && candidateData != null){
+        const filterVote = candidateData.filter(x => x.already_voted == true)
+        if(filterVote !=null && filterVote.length >0) {
+            alert('You have already Voted for Supersinger Plus Rajasthan');
+            return ;
+        }
+      }
+
         localStorage.setItem('applicationId', applicationId);
         setLoading(true);
 
@@ -80,8 +90,6 @@ const Topvotelist = () => {
             const response = await axios.post(apiUrl, {
                 mobileNo: getUserProfile.mobile
             }, { timeout: 50000 });
-            // console.log(response, 'responsefirstindia')
-
 
             if (response.status === 200) {
                 if (response.data.isSuccess === 1) {
@@ -94,15 +102,15 @@ const Topvotelist = () => {
             }
 
         } catch (error) {
-            console.error('Error:', error.message);
+            // console.error('Error:', error.message);
             setLoading(false);
             if (error.response) {
-                console.error('Response data:', error.response.data);
-                console.error('Response status:', error.response.status);
+                console.error('Response data:');
+                console.error('Response status:');
             } else if (error.request) {
-                console.error('Request made but no response received:', error.request);
+                console.error('Request made but no response received:');
             } else {
-                console.error('Error setting up the request:', error.message);
+                console.error('Error setting up the request:');
             }
             toast.error("Failed to send OTP");
         }
@@ -124,7 +132,6 @@ const Topvotelist = () => {
                 OTP: otp,
             });
 
-            // console.log(response)
             if (response.status == 200) {
                 if (response.data.isSuccess === 1) {
                     setIsShiproketPopupOpen(false)
@@ -136,7 +143,6 @@ const Topvotelist = () => {
                             try {
                                 if (userId != null && applicationId != null) {
                                     const response = await axios.post(`${baseUrl}get_profile`, pUserIdModel);
-                                    // console.log(response)
                                     if (response.data.status === 200) {
                                         try {
                                             if (response.data.result[0].is_buy === 1) {
@@ -145,12 +151,8 @@ const Topvotelist = () => {
                                                     application_id: applicationId ? applicationId : '0',
                                                     voting_type: 'prizemoney'
                                                 })
-                                                // console.log(response,'response')
                                                 if (responseVotion.data.status === 200) {
-                                                    // if(response.data.isSuccess == )
-                                                    // console.log('Voting successful:', responseVotion);
                                                     setIsVoteSuccess(true);
-                                                    // getVotingList(userId);
                                                     fetchSections();
                                                     setButton(true);
                                                 } else {
@@ -179,7 +181,7 @@ const Topvotelist = () => {
                     }
                 } else {
                     toast.error("OTP Verification failed");
-                    setIsShiproketPopupOpen(false)
+                    // setIsShiproketPopupOpen(false)
 
                 }
             }

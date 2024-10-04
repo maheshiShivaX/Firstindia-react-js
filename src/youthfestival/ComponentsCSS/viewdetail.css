@@ -1,0 +1,76 @@
+.youthfestival .view_detail {
+ padding-top: 30px;
+ padding-bottom: 60px;
+}
+
+.youthfestival .pay_btn {
+    background-color: #d73d55;
+    border-color: #d73d55;
+    color: rgb(255, 255, 255);
+    max-width: 170px;
+    height: 40px;
+    padding: 0px 20px;
+    min-width: 140px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.pay_now_button {
+    display: flex;
+    justify-content: center;
+}
+
+.youthfestival .user_details {
+    max-width: 500px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 33px;
+    border-radius: 8px;
+    min-width: 460px;
+}
+
+.youthfestival .view_detail .user_details .user_detail_heading {
+    font-size: 20px;
+    color: inherit;
+    font-weight: 600;
+}
+
+.youthfestival .content_user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.youthfestival .status_button {
+    text-align: end;
+    padding-bottom: 10px;
+}
+
+.youthfestival .status_button  .status_btn {
+    background: #82834d;
+    color: #fff;
+    padding: 1px 10px;
+    border-radius: 40px;
+    font-weight: 600;
+    border: none;
+}
+
+@media only screen  and (max-width:640px) {
+    .youthfestival .user_details {
+        max-width: 500px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        padding: 33px;
+        border-radius: 8px;
+        min-width: auto;
+    }
+
+    .youthfestival .view_detail .user_details .user_detail_heading {
+        font-size: 14px;
+        color: inherit;
+        font-weight: 600;
+    }
+
+    .youthfestival .view_detail .user_details  .user_detail_ans {
+        font-size: 14px;
+        color: inherit;
+    }
+}
