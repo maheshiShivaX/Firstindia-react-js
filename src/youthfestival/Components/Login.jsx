@@ -12,10 +12,22 @@ const FestivalLogin = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
+    // loginid = 'adminfip@gmail.com'
+    // password = 'Admin@fip'
+
     const onLogin = async () => {
         setLoading(true);
         setError(null);
+
+        const loginId = 'adminfip@gmail.com';
+        const password = 'Admin@fip';
         try {
+            if (email === loginId && password === password) {
+                localStorage.setItem('adminLogin',true);
+                navigate('/youthfestivalplus/applicationlist');
+                return;
+            }
+
             const response = await axios.get(`https://www.indianfilms.in/eFirstIndiaAPI/api/FestivalRegistration/FestivalLogin`, {
                 params: {
                     pEmailId: email,

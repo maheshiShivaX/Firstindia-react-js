@@ -141,13 +141,35 @@ const FestivalForm = () => {
                             </div>
                             <div>
                                 <h5>School or College?</h5>
-                                <input
+                                {/* <input
                                     type="text"
                                     placeholder="School or College"
                                     name="choice"
                                     value={values.choice}
                                     onChange={change}
-                                />
+                                /> */}
+                                <div className="select_button">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="choice"
+                                            value="School"
+                                            checked={values.choice === 'School'}
+                                            onChange={change}
+                                        />
+                                        School
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="choice"
+                                            value="College"
+                                            checked={values.choice === 'College'}
+                                            onChange={change}
+                                        />
+                                        College
+                                    </label>
+                                </div>
                             </div>
                             <div>
                                 <h5>Address</h5>

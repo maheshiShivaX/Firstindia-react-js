@@ -1,0 +1,20 @@
+.application_main {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.rdt_TableHeadRow {
+    background-color: #4c557d !important;
+    color: #ffffff !important;
+}
+
+/* .hudJpJ {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    background-color: #FFFFFF;
+    min-height: 52px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0, 0, 0, .12);
+    border-bottom-style: solid;
+} */

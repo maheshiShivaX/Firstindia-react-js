@@ -94,6 +94,11 @@ body {
     background-color: white;
 }
 
+.select_button {
+    display: flex;
+    gap: 25px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .youthfestival .card-contact {

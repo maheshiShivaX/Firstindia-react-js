@@ -22,12 +22,14 @@ import FestivalLogin from './youthfestival/Components/Login';
 import FestivalForm from './youthfestival/Components/Form';
 import FestivalPaymentSuccess from './youthfestival/Components/PaymentSuccess';
 import FestivalViewDetails from './youthfestival/Components/ViewDetail';
+import ApplicationList from './youthfestival/Components/ApplicationList';
 
 function RedirectToExternalUrl() {
   return <Navigate to="/downloads/" replace />
 }
 
 function App() {
+  const adminLogin = localStorage.getItem('adminLogin')
   return (
     <>
       <HashRouter>
@@ -52,6 +54,8 @@ function App() {
           <Route path="/youthfestivalplus/login" element={<FestivalLogin />} />
           <Route path="/youthfestivalplus/applicationform" element={<FestivalForm />} />
           <Route path="/youthfestivalplus/paymentsuccess/:id" element={<FestivalPaymentSuccess />} />
+
+          <Route path="/youthfestivalplus/applicationlist" element={<ApplicationList />} />
         </Routes >
       </HashRouter >
       <Router>
