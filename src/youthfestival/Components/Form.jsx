@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import toast from "react-hot-toast";
 
 
 const FestivalForm = () => {
@@ -13,6 +14,7 @@ const FestivalForm = () => {
     const navigate = useNavigate();
     const [values, setValues] = useState(
         {
+            phaseId: "2",
             school: "",
             choice: "",
             address: "",
@@ -53,24 +55,34 @@ const FestivalForm = () => {
         getStateData();
     }, []);
 
+    // const change = (e) => {
+    //     const { name, value } = e.target;
+    //     setValues({ ...values, [name]: value });
+    // };
+
     const change = (e) => {
         const { name, value } = e.target;
-        setValues({ ...values, [name]: value });
-    };
 
+        // If mobileNo or cordinatorMobileNo is changed, update both fields
+        if (name === 'cordinatorMobileNo' || name === 'mobileNo') {
+            setValues({ ...values, mobileNo: value, cordinatorMobileNo: value });
+        } else {
+            setValues({ ...values, [name]: value });
+        }
+    };
 
     const submit = async () => {
         if (
             values.school === "" ||
             values.choice === "" ||
             values.address === "" ||
-            values.name === "" ||
+            // values.name === "" ||
             values.emailId === "" ||
-            values.mobileNo === "" ||
+            // values.mobileNo === "" ||
             values.cordinatorName === "" ||
             values.cordinatorMobileNo === "" ||
-            values.escortName === "" ||
-            values.escortNumber === "" ||
+            // values.escortName === "" ||
+            // values.escortNumber === "" ||
             values.stateId === "" ||
             values.city === "" ||
             values.password === "" ||
@@ -82,12 +94,15 @@ const FestivalForm = () => {
                 // const res = await axios.post("http://localhost:4000/api/v1/post", values);
                 const response = await axios.post("https://www.indianfilms.in/eFirstIndiaAPI/api/FestivalRegistration/SaveFestivalRegistration", values);
 
-
                 // Access the response data
                 if (response.status == 200) {
                     if (response.data.isSuccess == 200) {
                         localStorage.setItem('festivalRegId', response?.data?.data?.festivalRegId)
                         navigate('/youthfestivalplus/viewdetails');
+                    }else if(response.data.isSuccess == 404){
+                        alert(response.data.message);
+                    }else{
+                        toast.error('please try again');
                     }
                 } else {
                     alert("Error in processing the payment");
@@ -130,25 +145,19 @@ const FestivalForm = () => {
                         <hr />
                         <div className="cont-form flex-column justify-content-between">
                             <div>
-                                <h5>Name of the Institution</h5>
+                                <h5>Name of the Institution/Group</h5>
                                 <input
                                     type="text"
                                     placeholder="Enter The Name"
                                     name="school"
                                     value={values.school}
                                     onChange={change}
+                                    required
                                 />
                             </div>
                             <div>
-                                <h5>School or College?</h5>
-                                {/* <input
-                                    type="text"
-                                    placeholder="School or College"
-                                    name="choice"
-                                    value={values.choice}
-                                    onChange={change}
-                                /> */}
-                                <div className="select_button">
+                                <h5>Selected Activity</h5>
+                                {/* <div className="select_button">
                                     <label>
                                         <input
                                             type="radio"
@@ -169,6 +178,19 @@ const FestivalForm = () => {
                                         />
                                         College
                                     </label>
+                                </div> */}
+                                <div className="select_button">
+                                    <select
+                                        name="choice"
+                                        id="choice"
+                                        value={values.choice}
+                                        onChange={change}
+                                        required
+                                    >
+                                        <option >Select an Activity</option>
+                                        <option value="Band Performance">Band Performance</option>
+                                        <option value="Fashion Show">Fashion Show</option>
+                                    </select>
                                 </div>
                             </div>
                             <div>
@@ -178,9 +200,10 @@ const FestivalForm = () => {
                                     name="address"
                                     value={values.address}
                                     onChange={change}
+                                    required
                                 />
                             </div>
-                            <div>
+                            {/* <div>
                                 <h5>Name of the Institution Head</h5>
                                 <input
                                     type="text"
@@ -189,7 +212,7 @@ const FestivalForm = () => {
                                     value={values.name}
                                     onChange={change}
                                 />
-                            </div>
+                            </div> */}
                             <div>
                                 <h5>Email ID</h5>
                                 <input
@@ -198,6 +221,30 @@ const FestivalForm = () => {
                                     name="emailId"
                                     value={values.emailId}
                                     onChange={change}
+                                    required
+                                />
+                            </div>
+                            {/* <div>
+                                <h5>Contact Number</h5>
+                                <input
+                                    type="text"
+                                    placeholder="Contact Number"
+                                    name="mobileNo"
+                                    value={values.cordinatorMobileNo}
+                                    onChange={change}
+                                    maxLength={10}
+                                    required
+                                />
+                            </div> */}
+                            <div>
+                                <h5>Name of the Group Co-Ordinator</h5>
+                                <input
+                                    type="text"
+                                    placeholder="Enter The Name"
+                                    name="cordinatorName"
+                                    value={values.cordinatorName}
+                                    onChange={change}
+                                    required
                                 />
                             </div>
                             <div>
@@ -205,33 +252,13 @@ const FestivalForm = () => {
                                 <input
                                     type="text"
                                     placeholder="Contact Number"
-                                    name="mobileNo"
-                                    value={values.mobileNo}
-                                    onChange={change}
-                                    maxLength={10}
-                                />
-                            </div>
-                            <div>
-                                <h5>Name of the Co-Ordinator</h5>
-                                <input
-                                    type="text"
-                                    placeholder="Enter The Name"
-                                    name="cordinatorName"
-                                    value={values.cordinatorName}
-                                    onChange={change}
-                                />
-                            </div>
-                            <div>
-                                <h5>Contact Number of the Co-Ordinator</h5>
-                                <input
-                                    type="text"
-                                    placeholder="Contact Number"
                                     name="cordinatorMobileNo"
                                     value={values.cordinatorMobileNo}
                                     onChange={change}
+                                    required
                                 />
                             </div>
-                            <div>
+                            {/* <div>
                                 <h5>Name of the Escort Teacher</h5>
                                 <input
                                     type="text"
@@ -250,7 +277,7 @@ const FestivalForm = () => {
                                     value={values.escortNumber}
                                     onChange={change}
                                 />
-                            </div>
+                            </div> */}
                             <div className="selection_option">
                                 <h5>State</h5>
                                 <select
@@ -284,6 +311,7 @@ const FestivalForm = () => {
                                     name="city"
                                     value={values.city}
                                     onChange={change}
+                                    required
                                 />
                             </div>
                             <div>
@@ -304,6 +332,7 @@ const FestivalForm = () => {
                                     value={values.password}
                                     onChange={change}
                                     className="passward_field"
+                                    required
                                 />
                             </div>
                         </div>

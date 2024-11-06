@@ -13,8 +13,9 @@ const MyProfile = () => {
         const getProfile = async () => {
             try {
                 const response = await axios.post(`${baseUrl}get_profile`, { id: userId });
-                // console.log(response.data.result[0], "response.data.result1")
-                setUserGetProfile(response.data.result[0]);
+                if(response.data.status === 200){
+                    setUserGetProfile(response.data.result[0]);
+                }
             } catch (error) {
                 setError("Failed to fetch sections. Please try again later.");
             }

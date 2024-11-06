@@ -23,6 +23,7 @@ import FestivalForm from './youthfestival/Components/Form';
 import FestivalPaymentSuccess from './youthfestival/Components/PaymentSuccess';
 import FestivalViewDetails from './youthfestival/Components/ViewDetail';
 import ApplicationList from './youthfestival/Components/ApplicationList';
+// import PaymentReturn from './components/paymentreturn';
 
 function RedirectToExternalUrl() {
   return <Navigate to="/downloads/" replace />
@@ -47,6 +48,7 @@ function App() {
           <Route exact path="public/terms" element={<Terms />} />
           <Route exact path="public/privatepolicy" element={<PrivatePolicy />} />
           <Route exact path="public/returnpolicy" element={<ReturnPolicy />} />
+          {/* <Route exact path="public/paymentreturn/:id" element={<PaymentReturn />} /> */}
 
           {/* youthfestival routs */}
           <Route path="youthfestivalplus" element={<FestivalHome />} />

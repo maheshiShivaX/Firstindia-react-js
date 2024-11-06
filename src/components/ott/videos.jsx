@@ -43,8 +43,9 @@ const Videos = ({ sections }) => {
                 });
 
                 if (response.status === 200) {
-                    setVideo(response.data);
-                    // console.log("videos", response.data);
+                    if(response.data.status === 200){
+                        setVideo(response.data);
+                    }
                 } else {
                     setError("Failed to fetch video");
                 }

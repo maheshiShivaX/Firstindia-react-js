@@ -134,13 +134,15 @@ const PaymentGateway = () => {
         try {
           const result = await axios.post(`${baseUrl}update_order_status`, pIdModel);
           if (result.status === 200) {
-            setPaymentData(result.data.result);
-            if (result.data.result.payment_status === "1") {
-              setUserId(result.data.result.user_id);
-              setIsSuccess("S");
-            } else {
-              setUserId(result.data.result.user_id);
-              setIsSuccess("F");
+            if (result.data.status === 200) {
+              setPaymentData(result.data.result);
+              if (result.data.result.payment_status === "1") {
+                setUserId(result.data.result.user_id);
+                setIsSuccess("S");
+              } else {
+                setUserId(result.data.result.user_id);
+                setIsSuccess("F");
+              }
             }
           }
         } catch (error) {

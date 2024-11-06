@@ -27,7 +27,7 @@ const Navbar = () => {
                                 <Link to="/youthfestivalplus" className='navlink'>HOME</Link>
                             </li>
                             <li class="nav-item">
-                                <Link onClick={() => scrollToSection('section1')} className='navlink'>ABOUT US</Link>
+                                <Link onClick={() => scrollToSection('section1')} className='navlink'>GUESTS OF HONOUR</Link>
                             </li>
                             <li class="nav-item">
                                 <Link onClick={() => scrollToSection('section2')} className='navlink'>HOW TO APPLY</Link>

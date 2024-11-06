@@ -52,6 +52,7 @@
   }
   .youthfestival .footer-menu {
       margin-top: 30px;
+      display: block !important;
   }
   
   .youthfestival  .footer-menu-name {

@@ -8,6 +8,16 @@
     color: #ffffff !important;
 }
 
+.ioaitR div:first-child {
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.bOmZtP div:first-child {
+    white-space: normal !important;
+}
+
 /* .hudJpJ {
     display: flex;
     align-items: stretch;

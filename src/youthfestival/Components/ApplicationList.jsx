@@ -3,7 +3,7 @@ import "../ComponentsCSS/applicationlist.css";
 import Navbar from './Navbar';
 import Footer from './Footer';
 import DataTable from 'react-data-table-component';
-import { API_URL, baseurl,baseAPIURL } from '../../_config';
+import { API_URL, baseurl, baseAPIURL } from '../../_config';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -35,7 +35,7 @@ const ApplicationList = ({ applications }) => {
 
     const getApplicationList = async () => {
         try {
-            const response = await axios.get(`${baseAPIURL}${API_URL?.GetFestivalRegistrationAll}`);
+            const response = await axios.get(`${baseAPIURL}${API_URL?.GetFestivalRegistrationAll}?pPhaseId=2`);
             if (response.status == 200) {
                 if (response.data.isSuccess == 200 && response.data.data.length > 0) {
                     setApplicationList(response?.data?.data);
@@ -52,9 +52,9 @@ const ApplicationList = ({ applications }) => {
         }
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         getApplicationList();
-    },[]);
+    }, []);
 
 
     const columns = [
@@ -68,79 +68,79 @@ const ApplicationList = ({ applications }) => {
             name: 'Name of the Institution',
             selector: row => row.school,
             sortable: true,
-            width:'200px'
+            width: '200px'
         },
         {
             name: 'School or College',
             selector: row => row.choice,
             sortable: true,
-            width:'200px'
+            width: '200px'
         },
         {
             name: 'Address',
             selector: row => row.address,
             sortable: true,
-            width:'200px'
+            width: '200px'
         },
         {
             name: 'Name of the Institution Head',
             selector: row => row.name,
             sortable: true,
-            width:'200px'
+            width: '200px'
         },
         {
             name: 'Email ID',
             selector: row => row.emailId,
             sortable: true,
-            width:'200px'
+            width: '260px'
         },
         {
             name: 'Contact Number',
             selector: row => row.mobileNo,
             sortable: true,
-            width:'200px'
+            width: '200px'
         },
         {
             name: 'Name of the Co-Ordinator',
             selector: row => row.cordinatorName,
             sortable: true,
-            width:'200px'
+            width: '200px'
         },
         {
             name: 'Contact Number of the Co-Ordinator',
             selector: row => row.cordinatorMobileNo,
             sortable: true,
-            width:'250px'
+            width: '250px'
         },
         {
             name: 'Name of the Escort Teacher',
             selector: row => row.escortName,
             sortable: true,
-            width:'250px'
+            width: '250px'
         },
         {
             name: 'Contact Number of the Escort Teacher',
             selector: row => row.escortNumber,
             sortable: true,
-            width:'280px'
+            width: '280px'
         },
         {
             name: 'State',
             selector: row => row.stateName,
             sortable: true,
-            width:'200px'
+            width: '200px'
         },
         {
             name: 'City',
             selector: row => row.city,
             sortable: true,
-            width:'200px'
+            width: '200px'
         },
         {
             name: 'PaymentStatus',
             selector: row => row.paymentStatus,
             sortable: true,
-            width:'150px'
+            width: '150px'
         }
     ]
 
@@ -150,13 +150,14 @@ const ApplicationList = ({ applications }) => {
             <div className='application_main container-fluid py-4'>
                 <div className='application_list d-flex justify-content-between'>
                     <h2 className=''>Application List</h2>
-                    <Link to='/youthfestivalplus'  className=''>Logout</Link >
+                    <Link to='/youthfestivalplus' className=''>Logout</Link >
                 </div>
                 <div className='mt-4'>
                     <DataTable
                         columns={columns}
                         data={applicationList}
                         pagination
+                        paginationPerPage={15}  
                         highlightOnHover
                     />
                 </div>

@@ -40,16 +40,19 @@ body {
     flex-direction: column;
 }
 
-.youthfestival .cont-form > div {
+.youthfestival .cont-form>div {
     margin-bottom: 15px;
 }
 
-.youthfestival   .option {
+.youthfestival .option {
     color: #000 !important;
-}  
+}
 
 /* Input and Textarea Styling */
-.youthfestival input[type="text"], textarea,.form-control,.passward_field {
+.youthfestival input[type="text"],
+textarea,
+.form-control,
+.passward_field {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -65,7 +68,10 @@ body {
     color: #333 !important;
 }
 
-.youthfestival input[type="text"]:focus, textarea:focus,.passward_field:focus,.form-control:focus {
+.youthfestival input[type="text"]:focus,
+textarea:focus,
+.passward_field:focus,
+.form-control:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: none;
@@ -99,13 +105,22 @@ body {
     gap: 25px;
 }
 
+.select_button select {
+    height: 100%;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .youthfestival .card-contact {
         padding: 15px;
     }
 
-    .youthfestival input[type="text"], textarea {
+    .youthfestival input[type="text"],
+    textarea {
         font-size: 0.9rem;
         padding: 8px;
     }

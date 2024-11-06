@@ -63,7 +63,9 @@ const Ott = () => {
                 const response = await axios.post(url);
                 // console.log(response, "fgfgfgfgffgfgfgfgfgfgfgfgfgfgfg")
                 if (response.status === 200) {
-                    setSections(response.data.result);
+                    if(response.data.status === 200 && response.data.result !== null) {
+                        setSections(response.data.result);
+                    }
                 } else {
                     setError("Failed to fetch sections");
                 }

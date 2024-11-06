@@ -88,12 +88,12 @@ const FestivalViewDetails = () => {
                         null
                     }
                     <div className="content_user">
-                        <span className="user_detail_heading">School/Collage Name :-</span>
+                        <span className="user_detail_heading">Name of the Institution/Group :-</span>
                         <span className="user_detail_ans">{festivalRegData?.school}</span>
                     </div>
                     <div className="content_user" style={{ marginTop: '10px' }}>
-                        <span className="user_detail_heading">Name :-</span>
-                        <span className="user_detail_ans">{festivalRegData?.name}</span>
+                        <span className="user_detail_heading">Name of the Group Co-Ordinator :-</span>
+                        <span className="user_detail_ans">{festivalRegData?.cordinatorName}</span>
                     </div>
                     <div className="content_user" style={{ marginTop: '10px' }}>
                         <span className="user_detail_heading">Email Id :-</span>
@@ -101,7 +101,7 @@ const FestivalViewDetails = () => {
                     </div>
                     <div className="content_user" style={{ marginTop: '10px' }}>
                         <span className="user_detail_heading">Mobile Number :-</span>
-                        <span className="user_detail_ans">{festivalRegData?.mobileNo}</span>
+                        <span className="user_detail_ans">{festivalRegData?.cordinatorMobileNo}</span>
                     </div>
                     {youthpaymentStatus != "Y" ?
                         <div className="pay_now_button">

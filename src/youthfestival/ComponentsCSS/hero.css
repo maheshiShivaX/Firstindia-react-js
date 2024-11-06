@@ -15,149 +15,209 @@
     }
   }
 */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .youthfestival .container-nav{
-    background-image: url("../../../public/festivalimages/bg1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  .youthfestival .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.4);
-    width: 100%;
-    height: 100;
-    z-index: -1;
-  }
-  .youthfestival .countdown-container{
-    display: flex;
-  }
-  .youthfestival .big-text{
-    font-size:4rem ;
-  }
-  .youthfestival .title{
-    margin: 10px;
-    text-align: center;
-    color: #fff;
-    width: 100%;
-    letter-spacing: 2px;
-    font-size: 3rem;
-    line-height: 5.5rem;
-    background-color: transparent;
-  }
-  .youthfestival .title span{
-    display: block;
-    font-size: 6rem;
-    letter-spacing: 1rem;
-  }
-  .youthfestival .wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-height: 100vh;
-  }
+.youthfestival .container-nav{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.youthfestival .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 100;
+  z-index: -1;
+}
+.youthfestival .countdown-container{
+  display: flex;
+}
+.youthfestival .big-text{
+  font-size:4rem ;
+}
+.youthfestival .title{
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  line-height: 5.5rem;
+}
+.youthfestival .title span{
+  display: block;
+  font-size: 6rem;
+  letter-spacing: 1rem;
+}
+.youthfestival .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.youthfestival .timer {
+  backdrop-filter: blur(10px);
+  min-height: 50vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  flex-direction: column;  /* Stack items vertically */
+  border-radius: 20px;     /* Add border radius */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Optional light overlay */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+  margin: 20px auto;
+  width: 95%;
+  max-width: 600px; /* To control how large it gets */
+
+  /* New addition to shift upwards */
+  position: relative;
+  top: -100px; /* Default for larger screens */
+}
+
+/* Medium screens (tablets and small desktops) */
+@media (max-width: 992px) {
   .youthfestival .timer {
-    backdrop-filter: blur(10px);
-    min-height: 50vh;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    flex-direction: column;  /* Stack items vertically */
-    border-radius: 20px;     /* Add border radius */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Optional light overlay */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
-    margin: 20px auto;
-    width: 95%;
-    max-width: 600px; /* To control how large it gets */
-  
-    /* New addition to shift upwards */
-    position: relative;
-    top: -100px; /* Default for larger screens */
+    top: -30px; /* Adjust position for medium screens */
   }
-  
-  /* Medium screens (tablets and small desktops) */
-  @media (max-width: 992px) {
-    .youthfestival .timer {
-      top: -30px; /* Adjust position for medium screens */
-    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .youthfestival .timer {
+    top: -20px; /* Adjust position for small screens */
   }
-  
-  /* Small screens (phones) */
-  @media (max-width: 768px) {
-    .youthfestival .timer {
-      top: -20px; /* Adjust position for small screens */
-    }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .youthfestival .timer {
+    top: -10px; /* Adjust position for extra small screens */
   }
-  
-  /* Extra small screens */
-  @media (max-width: 576px) {
-    .youthfestival .timer {
-      top: -10px; /* Adjust position for extra small screens */
-    }
+}
+.youthfestival .countdown-container > div{
+  margin: 0 1.5rem;
+  text-align: center;
+  border: 2px solid #fff;
+  padding: 0px 20px;
+  border-radius: 12px;
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  color: #fff;
+  min-width: 150px;
+}
+@media(max-width:992px){
+  .youthfestival .countdown-container > div{
+    margin:0 1rem;
+  }
+}
+@media(max-width:767px){
+  .youthfestival .countdown-container{
+    flex-wrap: wrap;
   }
   .youthfestival .countdown-container > div{
-    margin: 0 1.5rem;
-    text-align: center;
-    border: 2px solid #fff;
-    padding: 0px 20px;
-    border-radius: 12px;
-    box-shadow: 1px 2px 10px rgba(0,0,0,0.5);
-    box-sizing: border-box;
-    color: #fff;
-    min-width: 150px;
+    margin: 1rem auto;
+    max-width: 150px;
   }
-  @media(max-width:992px){
-    .youthfestival .countdown-container > div{
-      margin:0 1rem;
-    }
+  .youthfestival .title{
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin: 10px 0px;
   }
-  @media(max-width:767px){
-    .youthfestival .countdown-container{
-      flex-wrap: wrap;
-    }
-    .youthfestival .countdown-container > div{
-      margin: 1rem auto;
-      max-width: 150px;
-    }
-    .youthfestival .title{
-      font-size: 1.5rem;
-      line-height: 3.5rem;
-      margin: 10px 0px;
-    }
-    .youthfestival .title span{
-      font-size: 2rem;
-    }
+  .youthfestival .title span{
+    font-size: 2rem;
   }
-  .youthfestival .hero-img{
-    width: 100%;
-    height: auto;
-    margin: auto;
+}
+.youthfestival .hero-img{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.youthfestival .hero-button{
+  align-items: center;
+}
+.youthfestival .btn{
+  background-color: #d73d55;
+  border-color: #d73d55; 
+  padding: 8px 22px;
+}
+
+.youthfestival .btn:hover {
+  background-color: #d73d55; /* Darker shade for hover */
+  border-color: #d73d55; /* Darker border for hover */
+}
+
+/* Container for background image */
+.youthfestival .background-container {
+  /* background-image: url('path-to-your-background-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Flex container for text and overlay image */
+.youthfestival .content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between text and image */
+}
+
+/* Text styling */
+.youthfestival .main-text {
+  font-size: 2rem; /* Base font size */
+  margin: 0;
+}
+
+/* Overlay image styling */
+.youthfestival .overlay-image {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .youthfestival .content-container {
+      flex-direction: column; /* Stacks text and image vertically */
   }
-  .youthfestival .hero-button{
-    align-items: center;
+
+  .youthfestival .main-text {
+      font-size: 1.5rem; /* Smaller font size */
   }
-  .youthfestival .btn{
-    background-color: #d73d55; /* Change this to your desired color */
-    border-color: #d73d55; /* Change this to your desired border color */
+
+  .youthfestival .overlay-image {
+      width: 80px; /* Smaller image size */
   }
-  
-  .youthfestival .btn:hover {
-    background-color: #d73d55; /* Darker shade for hover */
-    border-color: #d73d55; /* Darker border for hover */
+}
+
+@media (max-width: 480px) {
+  .youthfestival .main-text {
+      font-size: 1.2rem; /* Even smaller font size */
   }
-  
+
+  .youthfestival .overlay-image {
+      width: 60px; /* Smaller image size */
+  }
+}
+
+.youthfestival .overlay-image {
+  width: 750px; /* Set desired width */
+  height: auto; /* Maintains the aspect ratio */
+  /* Alternatively, you can set max-width to make it responsive */
+  max-width: 100%; /* Makes the image responsive within its container */
+}
+

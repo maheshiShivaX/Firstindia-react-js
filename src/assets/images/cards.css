@@ -1,0 +1,27 @@
+.about-containerx {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+  }
+  
+  .card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width on small screens */
+  }
+  
+  @media (min-width: 600px) {
+    .card {
+      width: calc(50% - 16px); /* 2 cards per row on small screens */
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .card {
+      width: calc(33.33% - 16px); /* 3 cards per row on larger screens */
+    }
+  }

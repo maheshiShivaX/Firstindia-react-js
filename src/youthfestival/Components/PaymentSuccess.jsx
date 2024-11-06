@@ -18,6 +18,7 @@ const FestivalPaymentSuccess = () => {
     const queryParams = new URLSearchParams(location.search);
     const pathname = location.pathname;
     const orderId = pathname.split('/').pop();
+    const [showLoader, setShowLoader] = useState(true);
 
     const getPaymentRes = async () => {
         try {
@@ -55,44 +56,59 @@ const FestivalPaymentSuccess = () => {
         }
     }
 
+    useEffect(() => {
+        getPaymentRes();
+        const timer = setTimeout(() => {
+            setShowLoader(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div className='youthfestival'>
             <Navbar />
             <div className="payment_status d-flex justify-content-center py-5">
-                <div className="payment_status_box">
-                    {
-                        paymentResponse?.orderStatusId === 3 && paymentResponse?.paymentStatus === "Y" ?
-                            <div className="text-center">
+                {showLoader ? (
+                    <div className="loader">
+                        <div className="spinner"></div>
+                    </div>
+                ) : (
+                    <div className="payment_status_box">
+                        {
+                            paymentResponse?.orderStatusId === 3 && paymentResponse?.paymentStatus === "Y" ?
+                                <div className="text-center">
 
-                                <div className="payment_status_gif" style={{ display: "flex", justifyContent: "center" }}>
-                                    <img src="./festivalimages/gif.gif" alt="" loading="lazy" style={{ height: '100px' }} />
-                                </div>
-                                <h2 className="" style={{color:'green'}}>Payment Successful</h2>
-                                <div className="order_detail my-3">
-                                    <h4>{paymentResponse?.orderReqId}</h4>
+                                    <div className="payment_status_gif" style={{ display: "flex", justifyContent: "center" }}>
+                                        <img src="./festivalimages/gif.gif" alt="" loading="lazy" style={{ height: '100px' }} />
+                                    </div>
+                                    <h2 className="" style={{ color: 'green' }}>Payment Successful</h2>
+                                    <div className="order_detail my-3">
+                                        <h4>{paymentResponse?.orderReqId}</h4>
 
+                                    </div>
+                                    <div className="go_home_btn my-4">
+                                        <button onClick={() => onViewDetail()}>VIEW DETAIL</button >
+                                    </div>
                                 </div>
-                                <div className="go_home_btn my-4">
-                                    <button onClick={() => onViewDetail()}>VIEW DETAIL</button >
-                                </div>
-                            </div>
-                            :
-                            <div className="text-center">
+                                :
+                                <div className="text-center">
 
-                                <div className="payment_status_gif" style={{ display: "flex", justifyContent: "center" }}>
-                                    <img src="./festivalimages/payfailed1.png" alt="" loading="lazy" style={{ height: '100px' }} />
-                                </div>
-                                <h2>Payment Failed</h2>
-                                <div className="order_detail my-3">
-                                    <h4>{paymentResponse?.orderReqId}</h4>
+                                    <div className="payment_status_gif" style={{ display: "flex", justifyContent: "center" }}>
+                                        <img src="./festivalimages/payfailed1.png" alt="" loading="lazy" style={{ height: '100px' }} />
+                                    </div>
+                                    <h2>Payment Failed</h2>
+                                    <div className="order_detail my-3">
+                                        <h4>{paymentResponse?.orderReqId}</h4>
 
+                                    </div>
+                                    <div className="go_home_btn my-4">
+                                        <Link to="/youthfestivalplus/viewdetails">Please try again</Link >
+                                    </div>
                                 </div>
-                                <div className="go_home_btn my-4">
-                                    <Link to="/youthfestivalplus/viewdetails">Please try again</Link >
-                                </div>
-                            </div>
-                    }
-                </div>
+                        }
+                    </div>
+                )}
             </div>
             <Footer />
         </div>
