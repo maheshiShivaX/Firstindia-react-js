@@ -5,5 +5,10 @@ export const API_URL = {
     SentOtp: 'SentOtp/SentOtp',
     VerifyOTP: 'SentOtp/VerifyOTP',
 
-    GetFestivalRegistrationAll:'FestivalRegistration/GetFestivalRegistrationAll'
+    GetFestivalRegistrationAll: 'FestivalRegistration/GetFestivalRegistrationAll',
+
+    SaveFestRegistration: 'FestRegistration/SaveFestRegistration',
+    GetFestRegistration: 'FestRegistration/GetFestRegistration',
+    UpdateStatusFestRegistrationById: 'FestRegistration/UpdateStatusFestRegistrationById',
+    GetFestRegistrationByRegId: 'FestRegistration/GetFestRegistrationByRegId'
 }

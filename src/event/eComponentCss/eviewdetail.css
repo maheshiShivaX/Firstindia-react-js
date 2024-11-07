@@ -1,0 +1,60 @@
+.eview_detail_main {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.eview_detail_main .eview_detail .user_detail_box {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px;
+}
+
+.eview_detail_main .eview_detail .user_detail_box .user_event_data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.eview_detail_main .eview_detail .user_detail_box .user_event_data span {
+    font-size: 18px;
+}
+
+.eview_detail_main .eview_detail .user_detail_box .user_event_data .user_event_data_heading,
+.eview_detail_main .eview_detail .user_detail_box h3 {
+    font-weight: 600;
+}
+
+.eview_detail_main .card {
+    background-color: white;
+}
+
+.eview_detail_main .event_loader {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000f0;
+}
+
+.eview_detail_main .e_loader_circle {
+    display: flex;
+    align-items: center;
+}
+
+
+.loader_circle_1 {
+    animation: rotateClockwise 1.5s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes rotateClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

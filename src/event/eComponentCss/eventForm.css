@@ -1,0 +1,65 @@
+.event_main {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event_main .event_form {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    max-width: 500px;
+}
+
+.event_main .app_form input[type=text],
+textarea,.event_main .app_form input[type=email],.event_main .app_form input[type=date]  {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 10px;
+    transition: border-color .3s ease;
+    width: 100%;
+}
+
+.event_main .app_form h5 {
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.gender_field_sec label{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 18px;
+}
+
+.gender_input {
+    height: 18px;
+    width: 18px;
+}
+
+.event_main .event_buttonX {
+    background-color: #d73d55;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: background-color .3s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.eform_heading {
+    font-weight: 600;
+}
+
+@media only screen and (max-width:572px) {
+    .event_main {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+}

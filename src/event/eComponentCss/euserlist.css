@@ -1,0 +1,17 @@
+.euser_list_main {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.euser_list_main .approve_btn {
+    background-color: #4c557d;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.elogout_button {
+    background-color: white;
+    border: none;
+    font-size: 18px;
+}

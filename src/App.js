@@ -23,6 +23,11 @@ import FestivalForm from './youthfestival/Components/Form';
 import FestivalPaymentSuccess from './youthfestival/Components/PaymentSuccess';
 import FestivalViewDetails from './youthfestival/Components/ViewDetail';
 import ApplicationList from './youthfestival/Components/ApplicationList';
+import EventForm from './event/eComponents/eventForm';
+import ThankYou from './event/eComponents/thankyou';
+import EviewDetail from './event/eComponents/eviewDetail';
+import EloginForm from './event/eComponents/eLoginForm';
+import EuserList from './event/eComponents/eUserList';
 // import PaymentReturn from './components/paymentreturn';
 
 function RedirectToExternalUrl() {
@@ -58,6 +63,13 @@ function App() {
           <Route path="/youthfestivalplus/paymentsuccess/:id" element={<FestivalPaymentSuccess />} />
 
           <Route path="/youthfestivalplus/applicationlist" element={<ApplicationList />} />
+
+          {/* event route */}
+          <Route path="event/xyzyxzaunfdgfgh/:id" element={<EventForm />} />
+          <Route path="event/eformthankyou" element={<ThankYou />} />
+          <Route path="event/eviewdetails/:id" element={<EviewDetail />} />
+          <Route path="event/eloginform" element={<EloginForm />} />
+          <Route path="event/euserlist" element={<EuserList />} />
         </Routes >
       </HashRouter >
       <Router>
