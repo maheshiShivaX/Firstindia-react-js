@@ -30,11 +30,11 @@ export const getUserList = async () => {
                 return response.data.data; // Return the data if successful
             } else {
                 console.log('Data not found');
-                return []; // Return empty array if no data found
+                return [];
             }
         } else {
             console.log('Data fetch error');
-            return []; // Return empty array in case of fetch error
+            return [];
         }
     } catch (error) {
         console.error("Error fetching application list:", error);

@@ -4,6 +4,7 @@ import DataTable from 'react-data-table-component';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { getUserList, updateStatusFestRegistrationById } from '../../../_services';
+import toast from 'react-hot-toast';
 
 const EuserList = () => {
     const [userList, setUserList] = useState([]);
@@ -38,16 +39,15 @@ const EuserList = () => {
             try {
                 setLoading(true);
                 const response = await updateStatusFestRegistrationById(row.regId);
+                toast.success("Approval Successfully");
                 fetchUserList();
-                console.log('Approval success:', response);
             } catch (error) {
-                setError("Error occurred while approving. Please try again.");
-                console.error('Approval error:', error);
+                toast.error("Approval canceled. Please try again.");
             } finally {
                 setLoading(false);
             }
         } else {
-            console.log("Approval canceled.");
+            toast.error("Approval canceled.");
         }
     };
 

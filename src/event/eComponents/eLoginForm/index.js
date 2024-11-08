@@ -21,6 +21,7 @@ const EloginForm = () => {
         try {
             if (email === loginId && password === passwords) {
                 localStorage.setItem('eventadminLogin', true);
+                toast.success("Login Successfully");
                 navigate('/event/euserlist');
                 setEmail("");
                 setPassword("");

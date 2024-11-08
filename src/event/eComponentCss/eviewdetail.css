@@ -7,7 +7,7 @@
 
 .eview_detail_main .eview_detail .user_detail_box {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 .eview_detail_main .eview_detail .user_detail_box .user_event_data {
@@ -47,6 +47,22 @@
     animation: rotateClockwise 1.5s linear infinite;
     transform-origin: center;
     transform-box: fill-box;
+}
+
+.user_approve_button button {
+    background-color: #66b834;
+    padding: 1px 8px;
+    color: #ffffff;
+}
+
+.approved {
+    color: #34a853;
+    font-weight: 600;
+}
+
+.panding {
+    color: #ff2a2a;
+    font-weight: 600;
 }
 
 @keyframes rotateClockwise {
